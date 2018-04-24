@@ -1,5 +1,5 @@
 
-namespace Ir}{
+namespace Ir{
     /**
      * button pushed.
      */
