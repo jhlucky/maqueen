@@ -102,7 +102,7 @@ namespace IR {
   * initialises local variablesssss
   */
 
-  void init(Pins pin){
+  void init55(Pins pin){
     //rx = new ReceiverIR((PinName)pin);
     //tsb.start(); //interrupt timer for debounce
     //create_fiber(monitorIR);
