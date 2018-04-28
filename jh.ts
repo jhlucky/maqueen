@@ -7,7 +7,7 @@ namespace DFIR{
   
 
   //% blockId=ir_init
-  //% block="connect ir receiver to %pin" shim=IR::init
+  //% block="connect ir receiver to %pin"
   export function init2(pin: Pins): void{
     init(pin)
   }
