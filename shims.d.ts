@@ -1,21 +1,12 @@
 // Auto-generated. Do not edit.
 
-let cb: Action
 
+let cb: Action
     //% color=50 weight=80
     //% icon="\uf1eb"
 declare namespace IR {
   
-    class Packeta {
-        /**
-         * Obloq receives commands.
-         */
-        public mye: string;
-        /**
-         * Obloq receives the message content.
-         */
-        public myparam: string;
-    }
+    
 
     /**
      * button pushed.
@@ -37,18 +28,9 @@ declare namespace IR {
     //% mutateText=Packeta
     //% mutateDefaults="myparam:message"
     //% blockId=obloq_mqttCallbackUser block="on obloq received"
-    function obloq_mqttCallbackUser(cb: (packet: Packeta) => void) {
-        obloq_mqttCallback(() => {
-            const packet = new Packeta();
-            packet.mye = e
-            packet.myparam = param;
-            cb(packet)
-        });
-    }
+    function obloq_mqttCallbackUser(cb: (packet: Packeta) => void):void;
     
-    void obloq_mqttCallback(a: Action): void{
-        cb = a
-    }
+    
     
     
 }
