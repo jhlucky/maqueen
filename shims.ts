@@ -16,7 +16,6 @@ namespace IR{
     //% block="connect ir receiver to pin %pin"
     export function init2(pin: Pins): void{
         init(pin)
-        
     }
       
     //% blockId=ir_received_left_event2
@@ -24,25 +23,5 @@ namespace IR{
     export function onPressEvent2(btn: RemoteButton, body: Action): void{
         onPressEvent(btn,body)
     }
-  
-
-   
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
+}
