@@ -62,18 +62,7 @@ namespace IR {
   uint32_t now;
   ReceiverIR *rx;
   RemoteIR::Format fmt = RemoteIR::UNKNOWN;
-  cb = None
 
-  class Packeta {
-      /**
-       * Obloq receives commands.
-       */
-      public mye: string;
-      /**
-       * Obloq receives the message content.
-       */
-      public myparam: string;
-  }
   
   /**
   * button pushed.
@@ -86,16 +75,7 @@ namespace IR {
     actions[btn].push_back(body);
   }
   
-  void obloqforevers(Action a) {
-    if (a != 0) {
-      incr(a);
-      create_fiber(forever_stubs, (void*)a);
-    }
-  }
-  
-  void forever_stubs(void *a) {
-    runAction0((Action)a);
-  }
+
 
   void cA(vA runner){for(int i=0;i<runner.size();i++){runAction0(runner[i]);} }
 
@@ -129,25 +109,8 @@ namespace IR {
   }
   
   
-  void obloq_mqttCallback(a: Action): void{
-      cb = a
-  }
 
-  //% weight=62
-  //% blockGap=50
-  //% mutate=objectdestructuring
-  //% mutateText=Packeta
-  //% mutateDefaults="myparam:message"
-  //% blockId=obloq_mqttCallbackUser 
-  //% block="on obloq received"
-  void obloq_mqttCallbackUser(cb: (packet: Packeta) => void) {
-      obloq_mqttCallback(() => {
-          const packet = new Packeta();
-          packet.mye = "111"
-          packet.myparam = "333";
-          cb(packet)
-      });
-  }
+  
 
 
 

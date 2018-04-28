@@ -37,9 +37,31 @@ declare namespace IR {
     //% mutateText=Packeta
     //% mutateDefaults="myparam:message"
     //% blockId=obloq_mqttCallbackUser 
-    //% block="on obloq received" shim=IR::obloq_mqttCallbackUser
-    function obloq_mqttCallbackUser(cb: (packet: Packeta) => void):void;
+    //% block="on obloq received"
+    function obloq_mqttCallbackUser(cb: (packet: Packeta) => void) {
+        obloq_mqttCallback(() => {
+            const packet = new Packeta();
+            packet.mye = "111"
+            packet.myparam = "333";
+            cb(packet)
+        });
+    }
     
+    function obloq_mqttCallback(a: Action): void{
+        cb = a
+    }
+    
+    function obloqforevers(Action a) {
+    if (a != 0) {
+          incr(a);
+          create_fiber(forever_stubs, (void*)a);
+        }
+    }
+  
+    function forever_stubs(void *a) {
+        runAction0((Action)a);
+    }
+
     
     
     
