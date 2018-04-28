@@ -21,7 +21,7 @@ declare namespace IR {
     
     //% blockId=ir_received_left_event2
     //% block="on recv ir" shim=IR::onPressEvent2
-    function onPressEvent2(btn: Packeta, body: () => void): void;
+    function onPressEvent2(cB:(packet: Packeta)=> void): void;
     
     
 
