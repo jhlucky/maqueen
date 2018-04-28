@@ -87,9 +87,11 @@ namespace IR {
     //obloqforevers(cb)
     actions[btn].push_back(body);
   }
+  //% mutateText=Packeta
+  //% mutateDefaults="myparam:message"
   //% blockId=ir_received_left_event2
   //% block="on recv ir"
-  void onPressEvent2(cb: (packet: Packeta),Action body){
+  void onPressEvent2(Packeta btn,Action body){
     actionsB[btn].push_back(body);
   }
   
