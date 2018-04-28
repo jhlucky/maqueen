@@ -87,6 +87,7 @@ namespace IR {
     //obloqforevers(cb)
     actions[btn].push_back(body);
   }
+  //% mutate=objectdestructuring
   //% mutateText=Packeta
   //% mutateDefaults="myparam:message"
   //% blockId=ir_received_left_event2
