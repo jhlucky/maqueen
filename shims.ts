@@ -3,7 +3,6 @@ let cb: Action
 let mycb: Action
 let e        = ""
 let param    = ""
-let initPin = -1
 
 //% weight=10 color=#008B00 icon="\uf1eb" block="DFIR"
 namespace IR{
@@ -26,7 +25,6 @@ namespace IR{
     //% blockId=ir_init2
     //% block="connect ir receiver to pin %pin"
     export function init2(pin: Pins): void{
-        initPin=pin
         init(pin)
         
     }
@@ -46,7 +44,6 @@ namespace IR{
     //% blockId=obloq_mqttCallbackUser block="on obloq received"
     export function obloq_mqttCallbackUser(cb: (packet: Packeta) => void) {
         onPressEvent(0,packet)
-        //onPressEvent(0,packet)
     }
     
     function obloq_mqttCallback(a: Action): void{
