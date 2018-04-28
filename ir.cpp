@@ -6,10 +6,6 @@ using namespace pxt;
 typedef vector<Action> vA;
 
 
-let cb: Action
-
-
-
 enum class Pins{
   P0=  3,
   P1=  2,
@@ -85,7 +81,15 @@ namespace IR {
   //% block="on |%btn| button pressed"
   void onPressEvent(RemoteButton btn, Action body) {
     //if(actions.find(btn) == actions.end()) actions[btn] = new vector();
+    obloqforevers(cb)
     actions[btn].push_back(body);
+  }
+  
+  void obloqforevers(Action a) {
+    if (a != 0) {
+      incr(a);
+      create_fiber(forever_stubs, (void*)a);
+    }
   }
 
   void cA(vA runner){for(int i=0;i<runner.size();i++){runAction0(runner[i]);} }
@@ -133,8 +137,8 @@ namespace IR {
   void obloq_mqttCallbackUser(cb: (packet: Packeta) => void) {
       obloq_mqttCallback(() => {
           const packet = new Packeta();
-          packet.mye = e
-          packet.myparam = param;
+          packet.mye = "111"
+          packet.myparam = "333";
           cb(packet)
       });
   }
