@@ -6,7 +6,16 @@ let cb: Action
     //% icon="\uf1eb"
 declare namespace IR {
   
-    
+    class Packeta {
+        /**
+         * Obloq receives commands.
+         */
+        public mye: string;
+        /**
+         * Obloq receives the message content.
+         */
+        public myparam: string;
+    }
 
     /**
      * button pushed.
