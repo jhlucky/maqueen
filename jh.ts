@@ -10,7 +10,7 @@ namespace DFIR{
     }
 
     //% blockId=ir_init2
-    //% block="connect ir receiver to %pin"
+    //% block="connect ir receiver to %Pins"
     export function init2(pin: Pins): void{
         init(pin)
     }
