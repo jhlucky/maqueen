@@ -1,7 +1,7 @@
 // Auto-generated. Do not edit.
 
 
-    export enum Pins {
+    enum Pins {
     P0 = 3,
     P1 = 2,
     P2 = 1,
@@ -23,7 +23,7 @@
     P20 = 30,
     }
 
-    export enum RemoteButton {
+    enum RemoteButton {
     Power = 0x0,
     VolUP = 0x01,
     FuncStop = 0x02,
