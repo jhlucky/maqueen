@@ -43,7 +43,12 @@ namespace IR{
     //% mutateDefaults="myparam:message"
     //% blockId=obloq_mqttCallbackUser block="on obloq received"
     export function obloq_mqttCallbackUser(cb: (packet: Packeta) => void) {
-        onPressEvent(0,packet)
+        obloq_mqttCallback(() => {
+            const packet = new Packeta();
+            packet.mye = e
+            packet.myparam = param;
+            cb(packet)
+        })
     }
     
     function obloq_mqttCallback(a: Action): void{
