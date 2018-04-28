@@ -5,8 +5,7 @@
 using namespace pxt;
 typedef vector<Action> vA;
 
-
-enum Pins{
+enum class Pins{
   P0=  3,
   P1=  2,
   P2=  1,
@@ -28,31 +27,17 @@ enum Pins{
   P20= 30
 };
 
-enum RemoteButton {
+enum class RemoteButton {
   Power = 0x0,
-  VolUp = 0x01,
-  FuncStop = 0x02,
-  Left = 0x04,
-  Suspended = 0x05,
-  Right = 0x06,
-  Down = 0x08,
-  VolDonw = 0X09,
-  Up = 0x0a,
-  Zero = 0x0c,
-  EQ = 0X0d,
-  StRept = 0X0e,
-  One = 0x10,
-  Two = 0x11,
-  Three = 0x12,
-  Four = 0x14,
-  Five = 0x15,
-  Six = 0x16,
-  Seven = 0x18,
-  Eight = 0x19,
-  Nine = 0x1a
+  Up = 0x5,
+  Left = 0x8,
+  Right = 0xA,
+  Down = 0xD,
+  OK = 0x9,
+  Plus = 0x4,
+  Minus = 0xC,
+  Back = 0x6
 };
-
-
 
 //% color=50 weight=80
 //% icon="\uf1eb"
@@ -65,18 +50,15 @@ namespace IR {
   ReceiverIR *rx;
   RemoteIR::Format fmt = RemoteIR::UNKNOWN;
 
-  
-  
   /**
   * button pushed.
   */
-
+  //% blockId=ir_received_left_event
+  //% block="on |%btn| button pressed"
   void onPressEvent(RemoteButton btn, Action body) {
     //if(actions.find(btn) == actions.end()) actions[btn] = new vector();
-    //obloqforevers(cb)
     actions[btn].push_back(body);
   }
-  
 
   void cA(vA runner){for(int i=0;i<runner.size();i++){runAction0(runner[i]);} }
 
@@ -101,16 +83,11 @@ namespace IR {
   /**
   * initialises local variablesssss
   */
-
-  void init55(Pins pin){
-    //rx = new ReceiverIR((PinName)pin);
-    //tsb.start(); //interrupt timer for debounce
-    //create_fiber(monitorIR);
-    ;
+  //% blockId=ir_init
+  //% block="connect ir receiver to %pin"
+  void init(Pins pin){
+    rx = new ReceiverIR((PinName)pin);
+    tsb.start(); //interrupt timer for debounce
+    create_fiber(monitorIR);
   }
-  
-
-
-
-  
 }
