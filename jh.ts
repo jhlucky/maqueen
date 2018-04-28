@@ -4,7 +4,10 @@
 //% weight=10 color=#008B00 icon="\uf1eb" block="DFIR"
 namespace DFIR{
 
-  
+    //% advanced=true shim=IR::init
+    function init(pin: Pins):void{
+        return
+    }
 
     //% blockId=ir_init2
     //% block="connect ir receiver to %pin"
@@ -12,10 +15,7 @@ namespace DFIR{
         init(pin)
     }
       
-    //% advanced=true shim=IR::init
-    function init(pin: Pins):void{
-        return
-    }
+    
   
   
 }

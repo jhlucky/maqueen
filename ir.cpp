@@ -70,6 +70,15 @@ namespace IR {
 
   
   
+  /**
+  * button pushed.
+  */
+
+  void onPressEvent(RemoteButton btn, Action body) {
+    //if(actions.find(btn) == actions.end()) actions[btn] = new vector();
+    //obloqforevers(cb)
+    actions[btn].push_back(body);
+  }
   
 
   void cA(vA runner){for(int i=0;i<runner.size();i++){runAction0(runner[i]);} }
@@ -92,6 +101,9 @@ namespace IR {
     }
   }
 
+  /**
+  * initialises local variablesssss
+  */
 
   void init(Pins pin){
     rx = new ReceiverIR((PinName)pin);
