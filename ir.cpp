@@ -53,9 +53,7 @@ enum class RemoteButton {
 };
 
 class Packeta {
-  /**
-   * Obloq receives commands.
-   */
+
   public mye: string;
   /**
    * Obloq receives the message content.
@@ -92,7 +90,7 @@ namespace IR {
   //% mutateDefaults="myparam:message"
   //% blockId=ir_received_left_event2
   //% block="on recv ir"
-  void onPressEvent2(Packeta btn,Action body){
+  void onPressEvent2(cB:(Packeta btn),Action body){
     actionsB[btn].push_back(body);
   }
   

@@ -49,8 +49,8 @@
     }
  
     declare class Packeta{
-      public mye: string
-      public myparam: string
+    public mye: string
+    public myparam: string
     }
 
 // Auto-generated. Do not edit. Really.
