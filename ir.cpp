@@ -91,7 +91,7 @@ namespace IR {
   //% blockId=ir_received_left_event2
   //% block="on recv ir"
   void onPressEvent2(cB: (Packeta: packet){
-    //actionsB[btn].push_back(body);
+    //actionsB[btn].push_back(body)
   }
   
 
