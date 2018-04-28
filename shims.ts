@@ -1,6 +1,5 @@
 
 let cb: Action
-let mycb: Action
 let e        = ""
 let param    = ""
 
@@ -43,25 +42,10 @@ namespace IR{
     //% mutateDefaults="myparam:message"
     //% blockId=obloq_mqttCallbackUser block="on obloq received"
     export function obloq_mqttCallbackUser(cb: (packet: Packeta) => void) {
-        obloq_mqttCallback(() => {
-            const packet = new Packeta();
-            packet.mye = e
-            packet.myparam = param;
-            cb(packet)
-        })
+        ;
     }
+   
     
-    function obloq_mqttCallback(a: Action): void{
-        cb = a
-    }
-    
-    //% advanced=true shim=IR::obloqforevers
-    function obloqforevers(a: Action): void {
-        return
-    }
-  
-}
-
 
 
 

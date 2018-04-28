@@ -91,18 +91,7 @@ namespace IR {
     create_fiber(monitorIR);
   }
   
-  //%
-  void obloqforevers(Action a) {
-    if (a != 0) {
-      incr(a);
-      create_fiber(forever_stubs, (void*)a);
-    }
-  }
-  
-  //%    
-  void forever_stubs(void *a) {
-    runAction0((Action)a);
-  }
+ 
   
   
   
