@@ -46,6 +46,9 @@
     Eight = 0x19,
     Nine = 0x1a
     }
+    
+    namespace IR {
+    }
  
 
 // Auto-generated. Do not edit. Really.
