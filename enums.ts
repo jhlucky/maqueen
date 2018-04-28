@@ -1,7 +1,7 @@
 // Auto-generated. Do not edit.
 
 
-    declare enum Pins {
+    export enum Pins {
     P0 = 3,
     P1 = 2,
     P2 = 1,
@@ -23,8 +23,7 @@
     P20 = 30,
     }
 
-
-    declare enum RemoteButton {
+    export enum RemoteButton {
     Power = 0x0,
     VolUP = 0x01,
     FuncStop = 0x02,
@@ -48,9 +47,5 @@
     Nine = 0x1a
     }
  
-    declare class Packeta{
-    public mye: string
-    public myparam: string
-    }
 
 // Auto-generated. Do not edit. Really.
