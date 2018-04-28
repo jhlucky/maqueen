@@ -6,7 +6,7 @@ using namespace pxt;
 typedef vector<Action> vA;
 
 
-enum class Pins{
+enum Pins{
   P0=  3,
   P1=  2,
   P2=  1,
@@ -28,7 +28,7 @@ enum class Pins{
   P20= 30
 };
 
-enum class RemoteButton {
+enum RemoteButton {
   Power = 0x0,
   VolUp = 0x01,
   FuncStop = 0x02,
@@ -105,7 +105,7 @@ namespace IR {
   void init(Pins pin){
     rx = new ReceiverIR((PinName)pin);
     tsb.start(); //interrupt timer for debounce
-    create_fiber(monitorIR);
+    //create_fiber(monitorIR);
   }
   
 
