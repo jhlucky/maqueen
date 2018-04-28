@@ -1,7 +1,17 @@
 
+let cb: Action
+let mycb: Action
+let e        = ""
+let param    = ""
 
 //% weight=10 color=#008B00 icon="\uf1eb" block="DFIR"
 namespace IR{
+  
+    export class Packeta {
+        public mye: string;
+        public myparam: string;
+    }
+    
 
     //% advanced=true shim=IR::init
     function init(pin: Pins):void{
@@ -26,4 +36,47 @@ namespace IR{
     }
   
   
+    //% weight=62
+    //% blockGap=50
+    //% mutate=objectdestructuring
+    //% mutateText=Packeta
+    //% mutateDefaults="myparam:message"
+    //% blockId=obloq_mqttCallbackUser block="on obloq received"
+    export function obloq_mqttCallbackUser(cb: (packet: Packeta) => void) {
+        obloq_mqttCallback(() => {
+            const packet = new Packeta();
+            packet.mye = e
+            packet.myparam = param;
+            cb(packet)
+        });
+    }
+    
+    function obloq_mqttCallback(a: Action): void{
+        cb = a
+    }
+    
+    //% advanced=true shim=IR::obloqforevers
+    function obloqforevers(a: Action): void {
+        return
+    }
+  
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
