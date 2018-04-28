@@ -52,17 +52,30 @@ enum class RemoteButton {
   Nine = 0x1a
 };
 
+class Packeta {
+  /**
+   * Obloq receives commands.
+   */
+  public mye: string;
+  /**
+   * Obloq receives the message content.
+   */
+  public myparam: string;
+};
+
 //% color=50 weight=80
 //% icon="\uf1eb"
 namespace IR { 
   map<RemoteButton, vA> actions;
   map<RemoteButton, uint32_t> lastact;
+  map<Packeta, vA> actionsB;
   Timer tsb; 
   uint8_t buf[32];
   uint32_t now;
   ReceiverIR *rx;
   RemoteIR::Format fmt = RemoteIR::UNKNOWN;
 
+  
   
   /**
   * button pushed.
@@ -74,11 +87,16 @@ namespace IR {
     //obloqforevers(cb)
     actions[btn].push_back(body);
   }
+  //% blockId=ir_received_left_event2
+  //% block="on button pressed"
+  void onPressEvent2(Packeta btn,Action body){
+    actionsB[btn].push_back(body);
+  }
   
 
 
   void cA(vA runner){for(int i=0;i<runner.size();i++){runAction0(runner[i]);} }
-  void cb(Action runner){runAction0(runner); }
+  void cB(Action runner){runAction0(runner); }
 
   void onReceivable(){
     int x = rx->getData(&fmt, buf, 32 * 8);
@@ -109,9 +127,7 @@ namespace IR {
     create_fiber(monitorIR);
   }
   
-  
 
-  
 
 
 
