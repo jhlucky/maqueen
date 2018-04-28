@@ -15,7 +15,9 @@ namespace IR{
         
     }
       
-    
+    //% blockId=ir_received_left_event
+    //% block="on |%btn| button pressed" shim=IR::onPressEvent
+    function onPressEvent(btn: RemoteButton, body: () => void): void;
   
   
 }
