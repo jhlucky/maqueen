@@ -71,7 +71,7 @@ namespace IR {
   //% block="on |%btn| button pressed"
   void onPressEvent(RemoteButton btn, Action body) {
     //if(actions.find(btn) == actions.end()) actions[btn] = new vector();
-    obloqforevers(cb)
+    //obloqforevers(cb)
     actions[btn].push_back(body);
   }
   
