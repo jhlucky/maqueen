@@ -8,7 +8,7 @@
     },
     "files": [
         "jh.ts",
-        "enums.ts",
+        "enums.d.ts",
         "ir.cpp",
         "ReceiverIR.cpp",
         "ReceiverIR.h",
