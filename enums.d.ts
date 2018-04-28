@@ -35,6 +35,7 @@
     Minus = 0xC,
     Back = 0x6,
     }
-
+declare namespace IR {
+}
 
 // Auto-generated. Do not edit. Really.

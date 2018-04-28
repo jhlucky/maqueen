@@ -7,7 +7,7 @@
         "core": "*"
     },
     "files": [
-        "ir.ts",
+        "shims.d.ts",
         "enums.d.ts",
         "ir.cpp",
         "ReceiverIR.cpp",
