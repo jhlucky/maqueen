@@ -88,8 +88,8 @@ namespace IR {
     actions[btn].push_back(body);
   }
   //% blockId=ir_received_left_event2
-  //% block="on button pressed"
-  void onPressEvent2(Packeta btn,Action body){
+  //% block="on recv ir"
+  void onPressEvent2(cb: (packet: Packeta),Action body){
     actionsB[btn].push_back(body);
   }
   

@@ -20,7 +20,7 @@ declare namespace IR {
     function init(pin: Pins): void;
     
     //% blockId=ir_received_left_event2
-    //% block="on button pressed" shim=IR::onPressEvent2
+    //% block="on recv ir" shim=IR::onPressEvent2
     function onPressEvent2(btn: Packeta, body: () => void): void;
     
     
