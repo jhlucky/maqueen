@@ -8,7 +8,7 @@ namespace IR{
         return
     }
     //% advanced=true shim=IR::onPressEvent
-    function onPressEvent(btn: RemoteButton,body Action):void{
+    function onPressEvent(btn: RemoteButton,body: Action):void{
         return
     }
 
