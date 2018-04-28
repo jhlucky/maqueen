@@ -34,14 +34,26 @@ enum class Pins{
 
 enum class RemoteButton {
   Power = 0x0,
-  Up = 0x5,
-  Left = 0x8,
-  Right = 0xA,
-  Down = 0xD,
-  OK = 0x9,
-  Plus = 0x4,
-  Minus = 0xC,
-  Back = 0x6
+  VOL+ = 0x01,
+  FUNC/STOP = 0x02,
+  Left = 0x04,
+  Suspended = 0x05,
+  Right = 0x06,
+  Down = 0x08,
+  VOL- = 0X09,
+  Up = 0x0a,
+  Zero = 0x0c,
+  EQ = 0X0d,
+  ST/REPT = 0X0e,
+  One = 0x10,
+  Two = 0x11,
+  Three = 0x12,
+  Four = 0x14,
+  Five = 0x15,
+  Six = 0x16,
+  Seven = 0x18,
+  Eight = 0x19,
+  Nine = 0x1a
 };
 
 //% color=50 weight=80
