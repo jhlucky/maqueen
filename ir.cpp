@@ -62,7 +62,6 @@ class Packeta {
 namespace IR { 
   map<RemoteButton, vA> actions;
   map<RemoteButton, uint32_t> lastact;
-  map<Packeta, vA> actionsB;
   Timer tsb; 
   uint8_t buf[32];
   uint32_t now;
@@ -84,7 +83,6 @@ namespace IR {
   
 
   void cA(vA runner){for(int i=0;i<runner.size();i++){runAction0(runner[i]);} }
-  void cB(Action runner){runAction0(runner); }
 
   void onReceivable(){
     int x = rx->getData(&fmt, buf, 32 * 8);
@@ -114,16 +112,7 @@ namespace IR {
     tsb.start(); //interrupt timer for debounce
     create_fiber(monitorIR);
   }
-  //% weight=62
-  //% blockGap=50
-  //% mutate=objectdestructuring
-  //% mutateText=Packeta
-  //% mutateDefaults="myparam:message"
-  //% blockId=obloq_mqttCallbackUser block="on obloq received"
-  void obloq_mqttCallbackUser(Packeta packet) {
-    ;
-  }
-
+  
 
 
 

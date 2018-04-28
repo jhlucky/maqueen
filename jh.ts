@@ -7,7 +7,7 @@ namespace DFIR{
   
   //% blockId=ir_received_left_event
   //% block="on |%btn| button pressed" shim=IR::onPressEvent
-  export function onPressEvent(btn: RemoteButton, body: () => void){
+  export function onPressEvent(btn: RemoteButton, body: () => void):void{
     return
   }
   
