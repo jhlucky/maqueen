@@ -91,6 +91,10 @@ namespace IR {
       create_fiber(forever_stubs, (void*)a);
     }
   }
+  
+  void forever_stubs(void *a) {
+    runAction0((Action)a);
+  }
 
   void cA(vA runner){for(int i=0;i<runner.size();i++){runAction0(runner[i]);} }
 
@@ -133,7 +137,8 @@ namespace IR {
   //% mutate=objectdestructuring
   //% mutateText=Packeta
   //% mutateDefaults="myparam:message"
-  //% blockId=obloq_mqttCallbackUser block="on obloq received"
+  //% blockId=obloq_mqttCallbackUser 
+  //% block="on obloq received"
   void obloq_mqttCallbackUser(cb: (packet: Packeta) => void) {
       obloq_mqttCallback(() => {
           const packet = new Packeta();
