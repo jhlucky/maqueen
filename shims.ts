@@ -34,16 +34,7 @@ namespace IR{
         onPressEvent(btn,body)
     }
   
-  
-    //% weight=62
-    //% blockGap=50
-    //% mutate=objectdestructuring
-    //% mutateText=Packeta
-    //% mutateDefaults="myparam:message"
-    //% blockId=obloq_mqttCallbackUser block="on obloq received"
-    export function obloq_mqttCallbackUser(cb: (packet: Packeta) => void) {
-        ;
-    }
+
    
     
 
