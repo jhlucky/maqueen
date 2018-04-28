@@ -18,12 +18,14 @@ declare namespace IR {
     //% blockId=ir_init
     //% block="connect ir receiver to %pin" shim=IR::init
     function init(pin: Pins): void;
+    //% weight=62
+    //% blockGap=50
     //% mutate=objectdestructuring
     //% mutateText=Packeta
     //% mutateDefaults="myparam:message"
-    //% blockId=ir_received_left_event2
-    //% block="on recv ir" shim=IR::onPressEvent2
-    function onPressEvent2(packet:Packeta , body: () => void): void;
+    //% blockId=obloq_mqttCallbackUser block="on obloq received"
+    function obloq_mqttCallbackUser(cB: (packet: Packeta) => void):void;
+
     
     
 

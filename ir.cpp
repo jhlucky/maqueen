@@ -81,16 +81,7 @@ namespace IR {
     //obloqforevers(cb)
     actions[btn].push_back(body);
   }
-  //% mutate=objectdestructuring
-  //% mutateText=Packeta
-  //% mutateDefaults="myparam:message"
-  //% blockId=ir_received_left_event2
-  //% block="on recv ir"
-  void onPressEvent2(Packeta packet,Action body){
-    ;
-  }
   
-
 
   void cA(vA runner){for(int i=0;i<runner.size();i++){runAction0(runner[i]);} }
   void cB(Action runner){runAction0(runner); }
@@ -123,7 +114,15 @@ namespace IR {
     tsb.start(); //interrupt timer for debounce
     create_fiber(monitorIR);
   }
-  
+  //% weight=62
+  //% blockGap=50
+  //% mutate=objectdestructuring
+  //% mutateText=Packeta
+  //% mutateDefaults="myparam:message"
+  //% blockId=obloq_mqttCallbackUser block="on obloq received"
+  export function obloq_mqttCallbackUser(cb: (packet: Packeta) => void) {
+    ;
+  }
 
 
 
