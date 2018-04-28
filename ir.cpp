@@ -78,7 +78,7 @@ namespace IR {
 
 
   void cA(vA runner){for(int i=0;i<runner.size();i++){runAction0(runner[i]);} }
-  void cb(vA runner){runAction0(runner); }
+  void cb(Action runner){runAction0(runner); }
 
   void onReceivable(){
     int x = rx->getData(&fmt, buf, 32 * 8);
