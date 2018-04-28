@@ -52,10 +52,7 @@ enum class RemoteButton {
   Nine = 0x1a
 };
 
-class Packeta {
-  public mye: string;
-  public myparam: string;
-};
+
 
 //% color=50 weight=80
 //% icon="\uf1eb"
