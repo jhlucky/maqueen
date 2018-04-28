@@ -103,10 +103,10 @@ namespace IR {
   */
 
   void init55(Pins pin){
-    //rx = new ReceiverIR((PinName)pin);
-    //tsb.start(); //interrupt timer for debounce
-    //create_fiber(monitorIR);
-    ;
+    rx = new ReceiverIR((PinName)pin);
+    tsb.start(); //interrupt timer for debounce
+    create_fiber(monitorIR);
+    
   }
   
 
