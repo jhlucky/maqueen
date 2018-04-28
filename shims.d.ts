@@ -24,7 +24,7 @@ declare namespace IR {
     //% mutateText=Packeta
     //% mutateDefaults="myparam:message"
     //% blockId=obloq_mqttCallbackUser block="on obloq received"
-    function obloq_mqttCallbackUser(packet: Packeta):void;
+    function obloq_mqttCallbackUser(cB:(packet: Packeta)  => void):void;
 
     
     
