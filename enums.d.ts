@@ -47,7 +47,10 @@
     Eight = 0x19,
     Nine = 0x1a
     }
-declare namespace IR {
-}
+ 
+    declare class Packeta{
+      public mye: string
+      public myparam: string
+    }
 
 // Auto-generated. Do not edit. Really.
