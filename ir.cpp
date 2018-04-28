@@ -107,6 +107,24 @@ namespace IR {
     tsb.start(); //interrupt timer for debounce
     create_fiber(monitorIR);
   }
+  //% weight=62
+  //% blockGap=50
+  //% mutate=objectdestructuring
+  //% mutateText=Packeta
+  //% mutateDefaults="myparam:message"
+  //% blockId=obloq_mqttCallbackUser block="on obloq received"
+  void obloq_mqttCallbackUser(cb: (packet: Packeta) => void) {
+        obloq_mqttCallback(() => {
+            const packet = new Packeta();
+            packet.mye = e
+            packet.myparam = param;
+            cb(packet)
+        });
+    }
+  
+  void obloq_mqttCallback(a: Action): void{
+      cb = a
+  }
 
 
 
