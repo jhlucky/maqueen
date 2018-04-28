@@ -10,7 +10,7 @@ namespace IR{
     }
 
     //% blockId=ir_init2
-    //% block="connect ir receiver to %pin"
+    //% block="connect ir receiver to pin %pin"
     export function init2(pin: Pins): void{
         init55(<Pins>pin)
         
