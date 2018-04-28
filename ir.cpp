@@ -62,6 +62,7 @@ namespace IR {
   uint32_t now;
   ReceiverIR *rx;
   RemoteIR::Format fmt = RemoteIR::UNKNOWN;
+  cb = None
 
   class Packeta {
       /**
