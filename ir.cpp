@@ -91,7 +91,12 @@ namespace IR {
   //% blockId=ir_received_left_event2
   //% block="on recv ir"
   void onPressEvent2(cB: (Packeta: packet){
-    //actionsB[btn].push_back(body)
+    obloq_mqttCallback(() => {
+      const packet = new Packeta();
+      packet.mye = "1"
+      packet.myparam = "3";
+      cB(packet)
+    });
   }
   
 
