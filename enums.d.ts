@@ -35,6 +35,12 @@
     Minus = 0xC,
     Back = 0x6,
     }
+    
+    declare class Packeta {
+    public mye: string;
+    public myparam: string;
+    }
+    
 declare namespace IR {
 }
 

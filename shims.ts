@@ -1,5 +1,5 @@
 
-
+let cb:Action
 
 //% weight=10 color=#008B00 icon="\uf1eb" block="DFIR"
 namespace IR{
@@ -22,6 +22,21 @@ namespace IR{
     //% block="on |%btn| button pressed"
     export function onPressEvent2(btn: RemoteButton, body: Action): void{
         onPressEvent(btn,body)
+    }
+    
+    //% weight=62
+    //% blockGap=50
+    //% mutate=objectdestructuring
+    //% mutateText=Packeta
+    //% mutateDefaults="myparam:message"
+    //% blockId=obloq_mqttCallbackUser block="on obloq received"
+    export function obloq_mqttCallbackUser(cb: (packet: Packeta) => void) {
+        obloq_mqttCallback(() => {
+            const packet = new Packeta()
+            packet.mye = e
+            packet.myparam = param
+            cb(packet)
+        })
     }
  
 }
