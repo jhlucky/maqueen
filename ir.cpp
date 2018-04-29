@@ -5,6 +5,8 @@
 using namespace pxt;
 typedef vector<Action> vA;
 
+public string param = ""
+
 enum class Pins{
   P0=  3,
   P1=  2,
@@ -49,7 +51,7 @@ namespace IR {
   map<RemoteButton, vA> actions;
   map<RemoteButton, uint32_t> lastact;
   
-  map<Packeta,vA> packet;
+  map<Packeta,vA> packetas;
   
   Timer tsb; 
   uint8_t buf[32];
@@ -69,7 +71,7 @@ namespace IR {
   
   
   void onPacket(Packeta pack,Action body){
-    packet[pack].push_back(body);
+    packetas[pack].push_back(body);
   }
 
   void cA(vA runner){for(int i=0;i<runner.size();i++){runAction0(runner[i]);} }
