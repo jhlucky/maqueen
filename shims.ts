@@ -18,7 +18,7 @@ namespace IR{
 
     //% blockId=ir_init2
     //% block="connect ir receiver to pin %pin"
-    export function init2(pin: Pins): void{
+    export function initIR(pin: Pins): void{
         init(pin)
     }
       
@@ -33,18 +33,18 @@ namespace IR{
     //% mutate=objectdestructuring
     //% mutateText=Packeta
     //% mutateDefaults="myparam:message"
-    //% blockId=obloq_mqttCallbackUser block="on receive IR"
-    export function obloq_mqttCallbackUser(cb: (packet: Packeta) => void) {
-        obloq_mqttCallback(() => {
+    //% blockId=IRcallback block="on receive IR"
+    export function IRcallback(cb: (packet: Packeta) => void) {
+        setIRcallback(() => {
             const packet = new Packeta();
             packet.myparam = "7";
             cb(packet)
         });
     }
     
-    function obloq_mqttCallback(a: Action): void{
+    function setIRcallback(a: Action): void{
         //onPressEvent(0,a)
-        cb=a
+        //cb=a
     }
  
 }
