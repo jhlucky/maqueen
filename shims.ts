@@ -1,5 +1,7 @@
 
 let cb:Action
+let e        = ""
+let param    = ""
 
 //% weight=10 color=#008B00 icon="\uf1eb" block="DFIR"
 namespace IR{
