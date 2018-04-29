@@ -38,7 +38,9 @@ enum class RemoteButton {
   Minus = 0xC,
   Back = 0x6
 };
-
+class Packeta {
+    public myparam: string;
+}
 //% color=50 weight=80
 //% icon="\uf1eb"
 namespace IR { 
@@ -90,4 +92,24 @@ namespace IR {
     tsb.start(); //interrupt timer for debounce
     create_fiber(monitorIR);
   }
+  
+   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 }

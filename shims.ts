@@ -6,10 +6,7 @@ let param    = ""
 //% weight=10 color=#008B00 icon="\uf1eb" block="DFIR"
 namespace IR{
   
-    export class Packeta {
-        public mye: string;
-        public myparam: string;
-    }
+
     
 
     //% advanced=true shim=IR::init
