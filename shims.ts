@@ -5,19 +5,27 @@
 //% weight=10 color=#008B00 icon="\uf1eb" block="DFIR"
 namespace DFIR {
 
-    /**
-     * button pushed.
-     */
-    //% blockId=ir_received_left_event
-    //% block="on |%btn| button pressed" shim=IR::onPressEvent
-    export function onPressEvent(btn: RemoteButton, body: () => void): void;
+    //% advanced=true shim=IR::onPressEvent
+    function onPressEvent(btn: RemoteButton, body:Action): void{
+      return
+    }
 
-    /**
-     * initialises local variablesssss
-     */
-    //% blockId=ir_init
-    //% block="connect ir receiver to %pin" shim=IR::init
-    export function init(pin: Pins): void;
+    //% advanced=true shim=IR::init
+    function init(pin: Pins): void{
+      return
+    }
+    
+    //% blockId=ir_received_left_event22
+    //% block="on |%btn| button pressed"
+    export function onPressEvent2(btn:RemoteButton,body: () => void):void{
+      onPressEvent(btn,body)
+    }
+    
+    //% blockId=ir_init22
+    //% block="connect ir receiver to %pin"
+    export function init2(pin:Pins):void{
+      init(pin)
+    }
 }
 
 // Auto-generated. Do not edit. Really.
