@@ -1,5 +1,5 @@
 // Auto-generated. Do not edit.
-    let paramter=""
+
 
     declare enum Pins {
     P0 = 3,
