@@ -13,6 +13,10 @@ namespace IR{
     function onPressEvent(btn: RemoteButton,body: Action):void{
         return
     }
+    //% advanced=true shim=IR::onPacket
+    function onPacket(pack: Packeta,body: Action):void{
+        return
+    }
 
     //% blockId=ir_init2
     //% block="connect ir receiver to pin %pin"
@@ -32,8 +36,12 @@ namespace IR{
     //% mutateText=Packeta
     //% mutateDefaults="myparam:message"
     //% blockId=obloq_mqttCallbackUser block="on receive IR"
-    export function obloq_mqttCallbackUser(cb: (btn: RemoteButton) => void) {
-        
+    export function obloq_mqttCallbackUser(cb: (packet: Packeta) => void) {
+        obloq_mqttCallback(() => {
+            const packet = new Packeta()
+            packet.myparam = param
+            cb(packet)
+        })
     }
     
     function obloq_mqttCallback(a: Action): void{

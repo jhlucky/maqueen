@@ -37,7 +37,6 @@
     }
     
     declare class Packeta {
-    public mye: string;
     public myparam: string;
     }
     

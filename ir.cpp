@@ -39,11 +39,18 @@ enum class RemoteButton {
   Back = 0x6
 };
 
+class Packeta {
+  public myparam: string;
+};
+
 //% color=50 weight=80
 //% icon="\uf1eb"
 namespace IR { 
   map<RemoteButton, vA> actions;
   map<RemoteButton, uint32_t> lastact;
+  
+  map<Packeta,vA> packet;
+  
   Timer tsb; 
   uint8_t buf[32];
   uint32_t now;
@@ -58,6 +65,11 @@ namespace IR {
   void onPressEvent(RemoteButton btn, Action body) {
     //if(actions.find(btn) == actions.end()) actions[btn] = new vector();
     actions[btn].push_back(body);
+  }
+  
+  
+  void onPacket(Packeta pack,Action body){
+    packet[pack].push_back(body);
   }
 
   void cA(vA runner){for(int i=0;i<runner.size();i++){runAction0(runner[i]);} }
