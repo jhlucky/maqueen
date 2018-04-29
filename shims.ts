@@ -43,7 +43,7 @@ namespace IR{
     }
     
     function obloq_mqttCallback(a: Action): void{
-        onPressEvent(0,a)
+        //onPressEvent(0,a)
     }
  
 }
