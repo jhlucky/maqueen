@@ -1,12 +1,13 @@
 let cb: Action
 let mycb: Action
-let e        = 0
+let e        = "1"
 let param    = "9"
 
 //% weight=10 color=#008B00 icon="\uf1eb" block="DFIR"
 namespace IR{
   
     export class Packeta {
+        public mye: string;
         public myparam: string;
     }
     
