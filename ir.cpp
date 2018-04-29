@@ -40,7 +40,7 @@ enum class RemoteButton {
 };
 class Packeta {
   public myparam: string;
-}
+};
 //% color=50 weight=80
 //% icon="\uf1eb"
 namespace IR { 
@@ -94,6 +94,7 @@ namespace IR {
   }
   
    
+  
   
   
   
