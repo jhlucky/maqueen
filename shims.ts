@@ -1,5 +1,4 @@
 
-let cb:Action
 
 //% weight=10 color=#008B00 icon="\uf1eb" block="DFIR"
 namespace IR{
@@ -28,23 +27,6 @@ namespace IR{
         onPressEvent(btn,body)
     }
     
-    //% weight=62
-    //% blockGap=50
-    //% mutate=objectdestructuring
-    //% mutateText=Packeta
-    //% mutateDefaults="myparam:message"
-    //% blockId=IRcallback block="on receive IR"
-    export function IRcallback(cb: (packet: Packeta) => void) {
-        setIRcallback(() => {
-            const packet = new Packeta();
-            packet.myparam = "7";
-            cb(packet)
-        });
-    }
     
-    function setIRcallback(a: Action): void{
-        //onPressEvent(0,a)
-        //cb=a
-    }
  
 }
