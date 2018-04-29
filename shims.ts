@@ -7,8 +7,7 @@ let param    = ""
 namespace IR{
   
     export class Packeta {
-        public mye: string
-        public myparam: string
+        public myparam: string;
     }
     
 
