@@ -1,12 +1,13 @@
 let cb: Action
 let mycb: Action
-let e        = ""
-let param    = ""
+let e        = 0
+let param    = "9"
 
 //% weight=10 color=#008B00 icon="\uf1eb" block="DFIR"
 namespace IR{
   
     export class Packeta {
+        public mye: number;
         public myparam: string;
     }
     
@@ -48,6 +49,7 @@ namespace IR{
     export function obloq_mqttCallbackUser(cb: (packet: Packeta) => void) {
         obloq_mqttCallback(() => {
             const packet = new Packeta();
+            packet.mye = e
             packet.myparam = param;
             cb(packet)
         });
