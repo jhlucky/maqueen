@@ -1,7 +1,7 @@
 
 
 //% weight=10 color=#008B00 icon="\uf1eb" block="DFIR"
-namespace IR{
+namespace DFIR{
     //% advanced=true shim=IR::init
     function init(pin: Pins):void{
         return

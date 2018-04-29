@@ -63,6 +63,10 @@ namespace IR {
     //if(actions.find(btn) == actions.end()) actions[btn] = new vector();
     actions[btn].push_back(body);
   }
+  
+  void onPacket(Packeta pack,Action body){
+    ;
+  }
 
   void cA(vA runner){for(int i=0;i<runner.size();i++){runAction0(runner[i]);} }
 
