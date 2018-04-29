@@ -5,8 +5,6 @@
 using namespace pxt;
 typedef vector<Action> vA;
 
-public string param = ""
-
 enum class Pins{
   P0=  3,
   P1=  2,
@@ -78,7 +76,7 @@ namespace IR {
 
   void onReceivable(){
     int x = rx->getData(&fmt, buf, 32 * 8);
-    #if(actions.find((RemoteButton)buf[2]) == actions.end()) return;
+    //if(actions.find((RemoteButton)buf[2]) == actions.end()) return;
     now = tsb.read_ms();
     if(now - lastact[(RemoteButton)buf[2]] < 100) return;
     lastact[(RemoteButton)buf[2]] = now;
