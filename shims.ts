@@ -49,7 +49,7 @@ namespace IR{
         obloq_mqttCallback(() => {
             const packet = new Packeta();
             packet.mye = e
-            packet.myparam = param;
+            packet.myparam = "9";
             cb(packet)
         });
     }
