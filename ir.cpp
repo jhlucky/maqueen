@@ -39,6 +39,10 @@ enum class RemoteButton {
   Back = 0x6
 };
 
+class Packet {
+  public myparam:string;
+};
+
 //% color=50 weight=80
 //% icon="\uf1eb"
 namespace IR { 

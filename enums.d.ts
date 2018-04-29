@@ -1,5 +1,8 @@
 // Auto-generated. Do not edit.
 
+    declare class Packet {
+    public myparam:string;
+    }
 
     declare enum Pins {
     P0 = 3,
