@@ -39,7 +39,7 @@ enum class RemoteButton {
   Back = 0x6
 };
 class Packeta {
-    public myparam: string;
+  public myparam: string;
 }
 //% color=50 weight=80
 //% icon="\uf1eb"
