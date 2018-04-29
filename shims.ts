@@ -37,7 +37,7 @@ namespace IR{
     export function obloq_mqttCallbackUser(cb: (packet: Packeta) => void) {
         obloq_mqttCallback(() => {
             const packet = new Packeta()
-            packet.myparam = param
+            packet.myparam = paramter
             cb(packet)
         })
     }
