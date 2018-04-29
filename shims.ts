@@ -1,3 +1,5 @@
+
+
 //% weight=10 color=#008B00 icon="\uf1eb" block="DFIR"
 namespace IR{
     //% advanced=true shim=IR::init
@@ -17,7 +19,7 @@ namespace IR{
       
     //% blockId=ir_received_left_event2
     //% block="on |%btn| button pressed"
-    export function onPressEvent2(btn: RemoteButton, body: () => void): void{
+    export function onPressEvent2(btn: RemoteButton, body: Action): void{
         onPressEvent(btn,body)
     }
  
