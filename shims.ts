@@ -6,7 +6,9 @@ let param    = ""
 //% weight=10 color=#008B00 icon="\uf1eb" block="DFIR"
 namespace IR{
   
-
+    export class Packeta {
+        public myparam: string;
+    }
     
 
     //% advanced=true shim=IR::init
@@ -15,6 +17,11 @@ namespace IR{
     }
     //% advanced=true shim=IR::onPressEvent
     function onPressEvent(btn: RemoteButton,body: Action):void{
+        return
+    }
+    
+    //% advanced=true shim=IR::onPressEvent3
+    function onPressEvent3(btn: RemoteButton,body: Action):void{
         return
     }
 
@@ -49,6 +56,7 @@ namespace IR{
     
     function obloq_mqttCallback(a: Action): void{
         cb = a
+        onPressEvent3(0,cb)
     }
     
 
