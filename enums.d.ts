@@ -1,5 +1,5 @@
 // Auto-generated. Do not edit.
-    declare public string param = ""
+    declare public string param;
 
     declare enum Pins {
     P0 = 3,
