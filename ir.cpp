@@ -94,7 +94,7 @@ namespace IR {
   }
   
   StringData* getParam(){
-    return ManagedString("").leakData();
+    return ManagedString("ddd").leakData();
   }
   
   
