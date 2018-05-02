@@ -7,6 +7,7 @@ let param    = "9"
 namespace IR{
   
     export class Packeta {
+        public mye: string;
         public myparam: string;
     }
     
@@ -43,6 +44,7 @@ namespace IR{
     export function obloq_mqttCallbackUser(cb: (packet: Packeta) => void) {
         obloq_mqttCallback(() => {
             const packet = new Packeta();
+            packet.mye = e;
             packet.myparam = param;
             cb(packet)
         });
