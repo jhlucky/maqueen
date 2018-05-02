@@ -86,7 +86,7 @@ namespace IR {
     now = tsb.read_ms();
     if(now - lastact[(RemoteButton)buf[2]] < 100) return;
     lastact[(RemoteButton)buf[2]] = now;
-    msg=ManagedString("jh3").leakData();
+    msg=ManagedString(buf[2]).leakData();
     cA(actions[(RemoteButton)buf[2]]);      
   }
 
