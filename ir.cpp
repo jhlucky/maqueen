@@ -68,7 +68,7 @@ namespace IR {
   void onReceivable(){
     int x = rx->getData(&fmt, buf, 32 * 8);
     uBit.serial.send("--");
-    uBit.serial.send(actions.find((RemoteButton)buf[2]));
+    //uBit.serial.send(actions.find((RemoteButton)buf[2]));
     uBit.serial.send("--");
     
     
@@ -101,7 +101,6 @@ namespace IR {
   }
   //%
   StringData* getParam(){
-    uBit.serial.send(msg);
     return ManagedString(msg).leakData();
   }
   
