@@ -20,9 +20,9 @@ namespace IR{
     function onPressEvent(btn: RemoteButton,body: Action):void{
         return
     }
-    
+     //% advanced=true shim=IR::getParam
     function getParam():string {
-        return "dddc"
+        return ""
     }
 
     //% blockId=ir_init2
