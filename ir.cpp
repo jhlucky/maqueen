@@ -71,7 +71,7 @@ namespace IR {
     now = tsb.read_ms();
     if(now - lastact[(RemoteButton)buf[2]] < 100) return;
     lastact[(RemoteButton)buf[2]] = now;
-    msg=ManagedString("jh2").leakData();;
+    msg=ManagedString("jh3").leakData();
     cA(actions[(RemoteButton)buf[2]]);  
     uBit.serial.send(buf);
   }
