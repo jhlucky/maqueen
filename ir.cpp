@@ -4,7 +4,7 @@
 #include "ReceiverIR.h"
 using namespace pxt;
 typedef vector<Action> vA;
-
+StringData* msg;
 
 
 enum class Pins{
@@ -70,6 +70,7 @@ namespace IR {
     now = tsb.read_ms();
     if(now - lastact[(RemoteButton)buf[2]] < 100) return;
     lastact[(RemoteButton)buf[2]] = now;
+    msg="jh";
     cA(actions[(RemoteButton)buf[2]]);  
   }
 
@@ -94,7 +95,7 @@ namespace IR {
   }
   //%
   StringData* getParam(){
-    return ManagedString("ddd").leakData();
+    return ManagedString(msg).leakData();
   }
   
   
