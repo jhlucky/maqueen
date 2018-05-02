@@ -67,13 +67,17 @@ namespace IR {
 
   void onReceivable(){
     int x = rx->getData(&fmt, buf, 32 * 8);
+    uBit.serial.send("--");
+    uBit.serial.send((RemoteButton)buf[2]);
+    uBit.serial.send("--");
+    
+    
     if(actions.find((RemoteButton)buf[2]) == actions.end()) return;
     now = tsb.read_ms();
     if(now - lastact[(RemoteButton)buf[2]] < 100) return;
     lastact[(RemoteButton)buf[2]] = now;
     msg=ManagedString("jh3").leakData();
-    cA(actions[(RemoteButton)buf[2]]);  
-    uBit.serial.send(buf);
+    cA(actions[(RemoteButton)buf[2]]);      
   }
 
   void monitorIR(){
