@@ -19,11 +19,6 @@ namespace IR{
     function onPressEvent(btn: RemoteButton,body: Action):void{
         return
     }
-    
-    //% advanced=true shim=IR::onPressEvent3
-    function onPressEvent3(btn: RemoteButton,body: Action):void{
-        return
-    }
 
     //% blockId=ir_init2
     //% block="connect ir receiver to pin %pin"

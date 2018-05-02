@@ -4,6 +4,7 @@
 #include "ReceiverIR.h"
 using namespace pxt;
 typedef vector<Action> vA;
+Action cb=None;
 
 enum class Pins{
   P0=  3,
@@ -61,7 +62,7 @@ namespace IR {
   }
   
   void obloq_mqttCallback(Action body){
-    onPressEvent(0,body);
+    cb=body;
   }
 
   void cA(vA runner){for(int i=0;i<runner.size();i++){runAction0(runner[i]);} }
@@ -73,6 +74,9 @@ namespace IR {
     if(now - lastact[(RemoteButton)buf[2]] < 100) return;
     lastact[(RemoteButton)buf[2]] = now;
     cA(actions[(RemoteButton)buf[2]]); 
+    
+    
+    
   }
 
   void monitorIR(){
@@ -94,12 +98,6 @@ namespace IR {
     tsb.start(); //interrupt timer for debounce
     create_fiber(monitorIR);
   }
-  
-   
-  void onPressEvent3(RemoteButton btn, Action body) {
-    actions[btn].push_back(body);
-  }
-  
   
   
   
