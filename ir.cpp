@@ -51,7 +51,7 @@ namespace IR {
   uint32_t now;
   ReceiverIR *rx;
   RemoteIR::Format fmt = RemoteIR::UNKNOWN;
-  StringData* msg;
+
 
   /**
   * button pushed.
@@ -71,7 +71,7 @@ namespace IR {
     now = tsb.read_ms();
     if(now - lastact[(RemoteButton)buf[2]] < 100) return;
     lastact[(RemoteButton)buf[2]] = now;
-    msg="jh";
+
     cA(actions[(RemoteButton)buf[2]]);  
   }
 
@@ -96,7 +96,7 @@ namespace IR {
   }
   //%
   StringData* getParam(){
-    return ManagedString(msg).leakData();
+    return ManagedString("jh").leakData();
   }
   
   
