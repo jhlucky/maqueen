@@ -55,7 +55,7 @@ namespace IR{
     
     function obloq_mqttCallback(a: Action): void{
         cb = a
-        onPressEvent3(0,cb)
+        //onPressEvent3(0,cb)
     }
     
 
