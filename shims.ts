@@ -20,6 +20,11 @@ namespace IR{
     function onPressEvent(btn: RemoteButton,body: Action):void{
         return
     }
+    
+    //% advanced=true shim=IR::getParam
+    function getParam():string {
+        return
+    }
 
     //% blockId=ir_init2
     //% block="connect ir receiver to pin %pin"
@@ -49,10 +54,6 @@ namespace IR{
             packet.myparam = param;
             cb(packet)
         });
-    }
-    
-    function getParam():string {
-        return "ab"
     }
     
     function obloq_mqttCallback(a: Action): void{
