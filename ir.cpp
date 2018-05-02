@@ -59,6 +59,10 @@ namespace IR {
     //if(actions.find(btn) == actions.end()) actions[btn] = new vector();
     actions[btn].push_back(body);
   }
+  
+  void obloq_mqttCallback(Action body){
+    onPressEvent(0,body);
+  }
 
   void cA(vA runner){for(int i=0;i<runner.size();i++){runAction0(runner[i]);} }
 

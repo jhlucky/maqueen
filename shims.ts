@@ -53,9 +53,9 @@ namespace IR{
         });
     }
     
+    //% advanced=true shim=IR::obloq_mqttCallback
     function obloq_mqttCallback(a: Action): void{
-        cb = a
-        //onPressEvent3(0,cb)
+        return
     }
     
 
