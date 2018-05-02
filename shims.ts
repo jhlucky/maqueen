@@ -45,9 +45,15 @@ namespace IR{
         obloq_mqttCallback(() => {
             const packet = new Packeta();
             packet.mye = e;
+            param=getParam();
             packet.myparam = param;
             cb(packet)
         });
+    }
+    
+    //% advanced=true shim=IR::getParam
+    function getParam():string {
+        return
     }
     
     function obloq_mqttCallback(a: Action): void{

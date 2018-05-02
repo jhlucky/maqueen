@@ -5,6 +5,8 @@
 using namespace pxt;
 typedef vector<Action> vA;
 
+
+
 enum class Pins{
   P0=  3,
   P1=  2,
@@ -68,10 +70,7 @@ namespace IR {
     now = tsb.read_ms();
     if(now - lastact[(RemoteButton)buf[2]] < 100) return;
     lastact[(RemoteButton)buf[2]] = now;
-    cA(actions[(RemoteButton)buf[2]]); 
-    
-    
-    
+    cA(actions[(RemoteButton)buf[2]]);  
   }
 
   void monitorIR(){
@@ -94,7 +93,9 @@ namespace IR {
     create_fiber(monitorIR);
   }
   
-  
+  void getParam(){
+      return "ab";
+  }
   
   
   
