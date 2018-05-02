@@ -93,8 +93,8 @@ namespace IR {
     create_fiber(monitorIR);
   }
   
-  string getParam(){
-    return "erer";
+  StringData* getParam(){
+    return ManagedString("").leakData();
   }
   
   
