@@ -4,7 +4,6 @@
 #include "ReceiverIR.h"
 using namespace pxt;
 typedef vector<Action> vA;
-Action cb=None;
 
 enum class Pins{
   P0=  3,
@@ -59,10 +58,6 @@ namespace IR {
   void onPressEvent(RemoteButton btn, Action body) {
     //if(actions.find(btn) == actions.end()) actions[btn] = new vector();
     actions[btn].push_back(body);
-  }
-  
-  void obloq_mqttCallback(Action body){
-    cb=body;
   }
 
   void cA(vA runner){for(int i=0;i<runner.size();i++){runAction0(runner[i]);} }
