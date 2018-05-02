@@ -23,7 +23,7 @@ namespace IR{
     
     //% advanced=true shim=IR::getParam
     function getParam():string {
-        return
+        return ""
     }
 
     //% blockId=ir_init2
