@@ -51,9 +51,8 @@ namespace IR{
         });
     }
     
-    //% advanced=true shim=IR::getParam
     function getParam():string {
-        return
+        return "ab"
     }
     
     function obloq_mqttCallback(a: Action): void{

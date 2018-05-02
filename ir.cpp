@@ -93,9 +93,7 @@ namespace IR {
     create_fiber(monitorIR);
   }
   
-  void getParam(){
-      return "ab";
-  }
+
   
   
   
