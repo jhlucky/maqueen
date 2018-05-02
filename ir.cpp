@@ -4,7 +4,7 @@
 #include "ReceiverIR.h"
 using namespace pxt;
 typedef vector<Action> vA;
-StringData* msg;
+
 
 
 enum class Pins{
@@ -51,6 +51,7 @@ namespace IR {
   uint32_t now;
   ReceiverIR *rx;
   RemoteIR::Format fmt = RemoteIR::UNKNOWN;
+  StringData* msg;
 
   /**
   * button pushed.
