@@ -92,10 +92,7 @@ namespace IR {
     tsb.start(); //interrupt timer for debounce
     create_fiber(monitorIR);
   }
-  
-  void getParam(){
-    return "erer";
-  }
+
   
   
   

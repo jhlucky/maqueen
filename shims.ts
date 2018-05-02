@@ -21,9 +21,8 @@ namespace IR{
         return
     }
     
-    //% advanced=true shim=IR::getParam
     function getParam():string {
-        return ""
+        return "cdcd"
     }
 
     //% blockId=ir_init2
