@@ -73,6 +73,7 @@ namespace IR {
     lastact[(RemoteButton)buf[2]] = now;
     msg=ManagedString("jh2").leakData();;
     cA(actions[(RemoteButton)buf[2]]);  
+    uBit.serial.send(buf);
   }
 
   void monitorIR(){
