@@ -50,10 +50,7 @@ namespace IR{
         });
     }
     
-    //% advanced=true shim=IR::obloq_mqttCallback
-    function obloq_mqttCallback(a: Action): void{
-        return
-    }
+    
     
 
   
