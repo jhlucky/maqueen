@@ -82,6 +82,8 @@ namespace IR {
     uBit.serial.send("--");
     uBit.serial.send(buf[2]);
     uBit.serial.send("--");
+    uBit.serial.send(buf);
+    uBit.serial.send("--");
     if(actions.find((RemoteButton)buf[2]) == actions.end()) return;
     now = tsb.read_ms();
     if(now - lastact[(RemoteButton)buf[2]] < 100) return;
