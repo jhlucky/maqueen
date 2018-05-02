@@ -68,10 +68,8 @@ namespace IR {
   void onReceivable(){
     int x = rx->getData(&fmt, buf, 32 * 8);
     uBit.serial.send("--");
-    //uBit.serial.send(actions.find((RemoteButton)buf[2]));
+    uBit.serial.send(actions.find((RemoteButton)buf[2]));
     uBit.serial.send("--");
-    
-    
     if(actions.find((RemoteButton)buf[2]) == actions.end()) return;
     now = tsb.read_ms();
     if(now - lastact[(RemoteButton)buf[2]] < 100) return;
