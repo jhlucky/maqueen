@@ -27,26 +27,18 @@ namespace IR{
 
     //% blockId=ir_init2
     //% block="connect ir receiver to pin %pin"
-    export function init2(pin: Pins): void{
+    export function initIR(pin: Pins): void{
         init(pin)
-        
     }
-      
-    //% blockId=ir_received_left_event2
-    //% block="on |%btn| button pressed"
-    export function onPressEvent2(btn: RemoteButton, body: Action): void{
-        onPressEvent(btn,body)
-    }
-  
   
     //% weight=62
     //% blockGap=50
     //% mutate=objectdestructuring
     //% mutateText=Packeta
     //% mutateDefaults="myparam:message"
-    //% blockId=obloq_mqttCallbackUser block="on obloq received"
-    export function obloq_mqttCallbackUser(cb: (packet: Packeta) => void) {
-        obloq_mqttCallback(() => {
+    //% blockId=DFIR_callbackUser block="on obloq received"
+    export function DFIR_callbackUser(cb: (packet: Packeta) => void) {
+        DFIR_callback(() => {
             const packet = new Packeta();
             packet.mye = e;
             param=getParam();
@@ -55,7 +47,7 @@ namespace IR{
         });
     }
     
-    function obloq_mqttCallback(a: Action): void{
+    function DFIR_callback(a: Action): void{
         cb=a
         onPressEvent(0,cb)
         onPressEvent(1,cb)
