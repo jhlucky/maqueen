@@ -48,6 +48,12 @@
     Nine = 0x1a,
     }
     
+    declare enum PingUnit {
+    //% block="cm"
+    Centimeters,
+    //% block="μs"
+    MicroSeconds
+    }
 declare namespace IR {
 }
 
