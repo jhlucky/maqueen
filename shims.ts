@@ -10,15 +10,15 @@ MicroSeconds
 }
 
 enum Motors {
-M1 = 0x1,
-M2 = 0x2
+M1 = 0x0,
+M2 = 0x1
 }
 
 enum Dir {
 //% blockId="CW" block="CW"
-CW = 1,
+CW = 0x0,
 //% blockId="CCW" block="CCW"
-CCW = -1
+CCW = 0x1
 }
 
 //% weight=10 color=#008B00 icon="\uf1eb" block="DFIR"
@@ -117,6 +117,9 @@ namespace IR{
     //% index.fieldEditor="gridpicker" index.fieldOptions.columns=2
     //% direction.fieldEditor="gridpicker" direction.fieldOptions.columns=2
     export function MotorRun(index: Motors, direction:Dir, speed: number): void {
+        console.log("aaaa: " + index);
+        console.log("bbbb: " + direction);
+        console.log("cccc: " + speed);
     }
 
   
