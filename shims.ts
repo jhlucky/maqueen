@@ -9,6 +9,18 @@ Centimeters,
 MicroSeconds
 }
 
+export enum Motors {
+M1 = 0x1,
+M2 = 0x2
+}
+
+export enum Dir {
+//% blockId="CW" block="CW"
+CW = 1,
+//% blockId="CCW" block="CCW"
+CCW = -1
+}
+
 //% weight=10 color=#008B00 icon="\uf1eb" block="DFIR"
 namespace IR{
   
