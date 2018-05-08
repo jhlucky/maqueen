@@ -2,6 +2,8 @@ let cb: Action
 let mycb: Action
 let e        = "1"
 let param    = "9"
+const MOTER_ADDRESSS = 0x10
+
 enum PingUnit {
 //% block="cm"
 Centimeters,
@@ -120,6 +122,12 @@ namespace IR{
         console.log("aaaa: " + index);
         console.log("bbbb: " + direction);
         console.log("cccc: " + speed);
+        //MOTER_ADDRESSS
+        let buf = pins.createBuffer(3);
+        buf[0]=index;
+        buf[1]=direction;
+        buf[2]=speed;
+        pins.i2cWriteBuffer(MOTER_ADDRESSS,buf);
     }
 
   
