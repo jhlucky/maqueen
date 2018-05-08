@@ -2,6 +2,12 @@ let cb: Action
 let mycb: Action
 let e        = "1"
 let param    = "9"
+enum PingUnit {
+//% block="cm"
+Centimeters,
+//% block="μs"
+MicroSeconds
+}
 
 //% weight=10 color=#008B00 icon="\uf1eb" block="DFIR"
 namespace IR{
