@@ -9,12 +9,12 @@ Centimeters,
 MicroSeconds
 }
 
-export enum Motors {
+enum Motors {
 M1 = 0x1,
 M2 = 0x2
 }
 
-export enum Dir {
+enum Dir {
 //% blockId="CW" block="CW"
 CW = 1,
 //% blockId="CCW" block="CCW"
