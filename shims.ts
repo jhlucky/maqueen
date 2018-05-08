@@ -104,8 +104,7 @@ namespace IR{
     //% speed.min=0 speed.max=256
     //% index.fieldEditor="gridpicker" index.fieldOptions.columns=2
     //% direction.fieldEditor="gridpicker" direction.fieldOptions.columns=2
-    export function MotorRun(index: motors, direction:direct, speed: number): void {
-        
+    export function MotorRun(index: Motors, direction:Dir, speed: number): void {
     }
 
   
