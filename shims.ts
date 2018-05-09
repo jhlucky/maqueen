@@ -16,12 +16,7 @@ M1 = 0x0,
 M2 = 0x1
 }
 
-enum Dir {
-//% blockId="CW" block="CW"
-CW = 0x0,
-//% blockId="CCW" block="CCW"
-CCW = 0x1
-}
+
 
 //% weight=10 color=#008B00 icon="\uf1eb" block="DFIR"
 namespace IR{
@@ -31,6 +26,12 @@ namespace IR{
         public myparam: string;
     }
     
+    export enum Dir {
+        //% blockId="CW" block="CW"
+        CW = 0x0,
+        //% blockId="CCW" block="CCW"
+        CCW = 0x1
+    }
 
     //% advanced=true shim=IR::init
     function init(pin: Pins):void{
