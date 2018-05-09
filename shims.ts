@@ -123,10 +123,15 @@ namespace IR{
         console.log("bbbb: " + direction);
         console.log("cccc: " + speed);
         //MOTER_ADDRESSS
-        let buf = pins.createBuffer(2);
+        let buf = pins.createBuffer(4);
 
-        buf[0]=direction;
-        buf[1]=speed;
+        buf[0]=0x00;
+        buf[1]=0x02;
+        
+        buf[2]=0x00;
+        buf[3]=speed;
+
+
         pins.i2cWriteBuffer(MOTER_ADDRESSS,buf);
     }
 
