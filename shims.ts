@@ -124,16 +124,21 @@ namespace IR{
         console.log("bbbb: " + direction);
         console.log("cccc: " + speed);
         //MOTER_ADDRESSS
-        let buf = pins.createBuffer(4);
-
-        buf[0]=0x00;
-        buf[1]=0x02;
+        let buf = pins.createBuffer(2);
+        buf[0]=0x00
+        buf[1]=0x00
+        pins.i2cWriteBuffer(0x10,buf);
         
-        buf[2]=0x00;
-        buf[3]=0xff;
+        
+        let buf2 = pins.createBuffer(4);
+        buf2[0]=0x00;
+        buf2[1]=0x02;
+        
+        buf2[2]=0x00;
+        buf2[3]=0xff;
 
 
-        pins.i2cWriteBuffer(MOTER_ADDRESSS,buf);
+        pins.i2cWriteBuffer(0x10,buf2);
     }
     
     //% weight=20
