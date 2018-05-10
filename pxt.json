@@ -9,7 +9,6 @@
     },
     "files": [
         "shims.ts",
-        "tests.ts",
         "enums.d.ts",
         "ir.cpp",
         "ReceiverIR.cpp",
