@@ -140,13 +140,13 @@ namespace IR{
     //% blockId=motor_motorStop block="Motor stop|%index"
     //% index.fieldEditor="gridpicker" index.fieldOptions.columns=2 
     export function motorStop(index: Motors) {
-        
+        return
     }
     
     //% weight=10
     //% blockId=motor_motorStopAll block="Motor Stop All"
     export function motorStopAll(): void {
-        
+        return
     }
 
   
