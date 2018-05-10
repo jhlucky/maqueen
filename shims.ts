@@ -129,8 +129,9 @@ namespace IR{
        buf[1]=0x02;
        buf[2]=0x00;
        buf[3]=0xff;
+       console.log("1111: " + buf);
        pins.i2cWriteBuffer(0x10, buf);
-       
+       console.log("2222: " + buf);
         
     }
     
