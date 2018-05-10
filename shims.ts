@@ -125,8 +125,7 @@ namespace IR{
         console.log("cccc: " + speed);
         //MOTER_ADDRESSS
 
-       
-        console.log(pins.i2cReadBuffer(0x10,1));
+
        
         
     }
