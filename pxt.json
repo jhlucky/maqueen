@@ -9,7 +9,7 @@
     },
     "files": [
         "shims.ts",
-        "test.ts",
+        "tests.ts",
         "enums.d.ts",
         "ir.cpp",
         "ReceiverIR.cpp",
@@ -19,7 +19,7 @@
         "TransmitterIR.h"
     ],
     "testFiles": [
-        "test.ts"
+        "tests.ts"
     ],
     "public": true
 }
