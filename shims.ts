@@ -126,7 +126,7 @@ namespace IR{
         //MOTER_ADDRESSS
 
        
-        console.log("5555: " + pins.i2cReadBuffer(0x10,1));
+        console.log(pins.i2cReadBuffer(0x10,1));
        
         
     }
