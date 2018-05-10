@@ -17,8 +17,5 @@
         "TransmitterIR.cpp",
         "TransmitterIR.h"
     ],
-    "testFiles": [
-        "tests.ts"
-    ],
     "public": true
 }
