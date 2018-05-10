@@ -134,6 +134,9 @@ namespace IR{
        console.log("2222: " + buf[1]);
        console.log("3333: " + buf[2]);
        console.log("4444: " + buf[3]);
+       
+       console.log("5555: " + i2cReadBuffer(0x10,1));
+       
         
     }
     
