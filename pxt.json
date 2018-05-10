@@ -8,6 +8,7 @@
     },
     "files": [
         "shims.ts",
+        "test.ts",
         "enums.d.ts",
         "ir.cpp",
         "ReceiverIR.cpp",
@@ -16,6 +17,9 @@
         "TransmitterIR.cpp",
         "TransmitterIR.h",
         "_locales/zh/IR-strings.json"
+    ],
+    "testFiles": [
+        "test.ts"
     ],
     "public": true
 }
