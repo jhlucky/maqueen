@@ -4,17 +4,9 @@ let e        = "1"
 let param    = "9"
 const MOTER_ADDRESSS = 0x10
 
-enum PingUnit {
-//% block="cm"
-Centimeters,
-//% block="μs"
-MicroSeconds
-}
 
-enum Motors {
-M1 = 0x0,
-M2 = 0x1
-}
+
+
 
 
 
@@ -26,12 +18,7 @@ namespace IR{
         public myparam: string;
     }
     
-    export enum Dir {
-        //% blockId="CW" block="CW"
-        CW = 0x0,
-        //% blockId="CCW" block="CCW"
-        CCW = 0x1
-    }
+    
 
     //% advanced=true shim=IR::init
     function init(pin: Pins):void{
@@ -93,49 +80,5 @@ namespace IR{
         onPressEvent(0x1a,cb)
     }
     
-    //% blockId=ultrasonic_sensor block="sensor trig %trig|echo %echo|unit %unit"
-    //% weight=95
-    export function sensor(trig: DigitalPin, echo: DigitalPin, unit: PingUnit, maxCmDistance = 500): number {
-        // send pulse
-        pins.setPull(trig, PinPullMode.PullNone);
-        pins.digitalWritePin(trig, 0);
-        control.waitMicros(2);
-        pins.digitalWritePin(trig, 1);
-        control.waitMicros(10);
-        pins.digitalWritePin(trig, 0);
-
-        // read pulse
-        let d = pins.pulseIn(echo, PulseValue.High, maxCmDistance * 42);
-        console.log("Distance: " + d/42);
-
-        switch (unit) {
-            case PingUnit.Centimeters: return d / 42;
-            default: return d ;
-        }
-    }
-    
-    //% weight=90
-    //% blockId=motor_MotorRun block="Motor|%index|dir|%Dir|speed|%speed"
-    //% speed.min=0 speed.max=256
-    //% index.fieldEditor="gridpicker" index.fieldOptions.columns=2
-    //% direction.fieldEditor="gridpicker" direction.fieldOptions.columns=2
-    export function MotorRun(index: Motors, direction:Dir, speed: number): void {
-        console.log("aaaa: " + index);
-        console.log("bbbb: " + direction);
-        console.log("cccc: " + speed);
-        //MOTER_ADDRESSS
-        let buf = pins.createBuffer(4);
-
-        buf[0]=0x00;
-        buf[1]=0x02;
-        
-        buf[2]=0x00;
-        buf[3]=speed;
-
-
-        pins.i2cWriteBuffer(MOTER_ADDRESSS,buf);
-    }
-    
-   
-
+  
 }
