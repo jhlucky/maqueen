@@ -4,7 +4,8 @@
     "description": "Tinkercademy package for ElecFreaks IR receiver module",
     "license": "MIT",
     "dependencies": {
-        "core": "*"
+        "core": "*",
+        "radio": "*"
     },
     "files": [
         "shims.ts",
