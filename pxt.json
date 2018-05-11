@@ -16,7 +16,7 @@
         "RemoteIR.h",
         "TransmitterIR.cpp",
         "TransmitterIR.h",
-        "_locales/zh/motor-strings.json"
+        "_locales/zh/ir-strings.json"
     ],
     "testFiles": [
         "tests.ts"
