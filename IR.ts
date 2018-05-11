@@ -18,7 +18,7 @@ M2 = 0x1
 
 
 
-//% weight=10 color=#008B00 icon="\uf1eb" block="DFIR"
+//% weight=10 color=#008B00 icon="\uf1eb" block="DFRobot miniQ"
 namespace IR{
   
     export class Packeta {
