@@ -143,7 +143,20 @@ namespace IR{
     //% blockId=motor_motorStop block="Motor stop|%index"
     //% index.fieldEditor="gridpicker" index.fieldOptions.columns=2 
     export function motorStop(index: Motors):void {
-        return
+        if(index==0){
+            let buf = pins.createBuffer(3);
+            buf[0]=0x00;
+            buf[1]=0;
+            buf[2]=0;
+            pins.i2cWriteBuffer(0x10, buf);
+        }
+        if(index==1){
+            let buf2 = pins.createBuffer(3);
+            buf2[0]=0x02;
+            buf2[1]=0;
+            buf2[2]=0;
+            pins.i2cWriteBuffer(0x10, buf2);
+        }
     }
     
     //% weight=10
