@@ -131,6 +131,13 @@ namespace IR{
         buf[2]=0;
         buf[3]=0xff;
         pins.i2cWriteBuffer(0x10, buf);
+        
+        let buf2 = pins.createBuffer(3);
+        buf2[0]=0x02;
+        buf2[2]=0;
+        buf2[3]=0xff;
+        pins.i2cWriteBuffer(0x10, buf2);
+        
     }
     
     //% weight=20
