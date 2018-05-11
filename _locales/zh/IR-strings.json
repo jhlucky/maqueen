@@ -1,3 +1,7 @@
 {
-    "IR.Dir.CW|block": "正转"
+    "IR.Dir.CW|block": "正转",
+    "IR.Dir.CCW|block": "反转",
+    "IR.motorStop|block": "电机 停止|%index",
+    "IR.motorStopAll|block": "停止所有电机",
+    "IR.MotorRun|block": "电机|%index|方向|%Dir|速度|%speed"
 }
