@@ -8,7 +8,7 @@
         "radio": "*"
     },
     "files": [
-        "shims.ts",
+        "IR.ts",
         "enums.d.ts",
         "ir.cpp",
         "ReceiverIR.cpp",
@@ -16,7 +16,7 @@
         "RemoteIR.h",
         "TransmitterIR.cpp",
         "TransmitterIR.h",
-        "_locales/zh/shims-strings.json"
+        "_locales/zh/IR-strings.json"
     ],
     "testFiles": [
         "tests.ts"
