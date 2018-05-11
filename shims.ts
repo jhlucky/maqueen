@@ -122,21 +122,19 @@ namespace IR{
     //% index.fieldEditor="gridpicker" index.fieldOptions.columns=2
     //% direction.fieldEditor="gridpicker" direction.fieldOptions.columns=2
     export function MotorRun(index: Motors, direction:Dir, speed: number): void {
-        if (index==0){
-            let buf = pins.createBuffer(3);
-            buf[0]=0x00;
-            buf[1]=direction;
-            buf[2]=speed;
-            pins.i2cWriteBuffer(0x10, buf);
-        }
+        //MOTER_ADDRESSS
+        let buf = pins.createBuffer(3);
+        buf[0]=0x00;
+        buf[1]=0;
+        buf[2]=0xff;
+        pins.i2cWriteBuffer(0x10, buf);
         
-        if(index == 1){
-            let buf2 = pins.createBuffer(3);
-            buf2[0]=0x02;
-            buf2[1]=direction;
-            buf2[2]=speed;
-            pins.i2cWriteBuffer(0x10, buf2);
-        }
+        let buf2 = pins.createBuffer(3);
+        buf2[0]=0x02;
+        buf2[1]=0;
+        buf2[2]=0xff;
+        pins.i2cWriteBuffer(0x10, buf2);
+        
     }
     
     //% weight=20
