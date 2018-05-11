@@ -129,7 +129,7 @@ namespace IR{
         buf[1]=0x02;
         buf[2]=0x00;
         buf[3]=0xff;
-        uBit.i2c.write(0x10, (char*)buf->payload, buf->length, false);
+        uBit.i2c.write(0x10, buf, 4, false);
 
        
         
