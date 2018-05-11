@@ -95,9 +95,9 @@ namespace IR{
         onPressEvent(0x1a,cb)
     }
     
-    //% blockId=ultrasonic_sensor block="sensor trig %trig|echo %echo|unit %unit"
+    //% blockId=ultrasonic_sensor block="sensor unit|%unit"
     //% weight=95
-    export function sensor(trig: DigitalPin, echo: DigitalPin, unit: PingUnit, maxCmDistance = 500): number {
+    export function sensor(unit: PingUnit, maxCmDistance = 500): number {
         // send pulse
         pins.setPull(DigitalPin.P1, PinPullMode.PullNone);
         pins.digitalWritePin(DigitalPin.P1, 0);
