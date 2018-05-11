@@ -99,15 +99,15 @@ namespace IR{
     //% weight=95
     export function sensor(trig: DigitalPin, echo: DigitalPin, unit: PingUnit, maxCmDistance = 500): number {
         // send pulse
-        pins.setPull(trig, PinPullMode.PullNone);
-        pins.digitalWritePin(trig, 0);
+        pins.setPull(DigitalPin.P1, PinPullMode.PullNone);
+        pins.digitalWritePin(DigitalPin.P1, 0);
         control.waitMicros(2);
-        pins.digitalWritePin(trig, 1);
+        pins.digitalWritePin(DigitalPin.P1, 1);
         control.waitMicros(10);
-        pins.digitalWritePin(trig, 0);
+        pins.digitalWritePin(DigitalPin.P1, 0);
 
         // read pulse
-        let d = pins.pulseIn(echo, PulseValue.High, maxCmDistance * 42);
+        let d = pins.pulseIn(DigitalPin.P2, PulseValue.High, maxCmDistance * 42);
         console.log("Distance: " + d/42);
 
         switch (unit) {
