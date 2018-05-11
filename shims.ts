@@ -68,6 +68,8 @@ namespace IR{
         });
     }
     
+   
+    
     function DFIR_callback(a: Action): void{
         cb=a
         onPressEvent(0,cb)
@@ -129,10 +131,7 @@ namespace IR{
         buf[1]=0x02;
         buf[2]=0x00;
         buf[3]=0xff;
-        uBit.i2c.write(0x10, buf, 4, false);
-
-       
-        
+        pins.i2cWriteBuffer(0x10, buf);
     }
     
     //% weight=20
