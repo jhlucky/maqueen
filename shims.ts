@@ -128,7 +128,9 @@ namespace IR{
             buf[1]=direction;
             buf[2]=speed;
             pins.i2cWriteBuffer(0x10, buf);
-        }else{
+        }
+        
+        if(index == 1){
             let buf2 = pins.createBuffer(3);
             buf2[0]=0x02;
             buf2[1]=direction;
