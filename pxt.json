@@ -15,7 +15,8 @@
         "ReceiverIR.h",
         "RemoteIR.h",
         "TransmitterIR.cpp",
-        "TransmitterIR.h"
+        "TransmitterIR.h",
+        "_locales/zh/IR-strings.json"
     ],
     "testFiles": [
         "tests.ts"
