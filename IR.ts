@@ -1,7 +1,7 @@
 let cb: Action
 let mycb: Action
 let e        = "1"
-let param    = "9"
+let param    = 0
 const MOTER_ADDRESSS = 0x10
 
 enum PingUnit {
