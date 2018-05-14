@@ -157,7 +157,7 @@ namespace IR {
     now = tsb.read_ms();
     if(now - lastact[(RemoteButton)buf[2]] < 100) return;
     lastact[(RemoteButton)buf[2]] = now;
-    msg=<number>buf[2];
+    msg=(RemoteButton)buf[2];
     cA(actions[(RemoteButton)buf[2]]);      
   }
 
