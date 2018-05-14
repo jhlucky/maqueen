@@ -63,7 +63,7 @@ namespace IR {
   uint32_t now;
   ReceiverIR *rx;
   RemoteIR::Format fmt = RemoteIR::UNKNOWN;
-  uint8_t msg;
+  int msg;
 
   /**
   * button pushed.
@@ -157,7 +157,7 @@ namespace IR {
     now = tsb.read_ms();
     if(now - lastact[(RemoteButton)buf[2]] < 100) return;
     lastact[(RemoteButton)buf[2]] = now;
-    msg=(RemoteButton)buf[2];
+    msg=<number>buf[2];
     cA(actions[(RemoteButton)buf[2]]);      
   }
 
@@ -181,7 +181,7 @@ namespace IR {
     create_fiber(monitorIR);
   }
   //% 
-  uint8_t getParam(){
+  int getParam(){
     return msg;
   }
   
