@@ -59,11 +59,11 @@ namespace IR {
   map<RemoteButton, vA> actions;
   map<RemoteButton, uint32_t> lastact;
   Timer tsb; 
-  uint8_t buf[32];
+  int buf[32];
   uint32_t now;
   ReceiverIR *rx;
   RemoteIR::Format fmt = RemoteIR::UNKNOWN;
-  uint8_t msg;
+  int msg;
 
   /**
   * button pushed.
@@ -157,7 +157,7 @@ namespace IR {
     now = tsb.read_ms();
     if(now - lastact[(RemoteButton)buf[2]] < 100) return;
     lastact[(RemoteButton)buf[2]] = now;
-    //msg=(RemoteButton)buf[2];
+    msg=(RemoteButton)buf[2];
     cA(actions[(RemoteButton)buf[2]]);      
   }
 
@@ -182,7 +182,7 @@ namespace IR {
   }
   //% 
   int getParam(){
-    return 2;
+    return msg;
   }
   
   
