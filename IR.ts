@@ -20,7 +20,7 @@ namespace IR{
         public myparam: number;
     }
     
-    enum Motors {
+    export enum Motors {
         //% blockId="M1" block="M1"
         M1 = 0x0,
         //% blockId="M2" block="M2"
