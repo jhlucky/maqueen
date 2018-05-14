@@ -63,7 +63,7 @@ namespace IR {
   uint32_t now;
   ReceiverIR *rx;
   RemoteIR::Format fmt = RemoteIR::UNKNOWN;
-  int msg;
+  uint8_t msg;
 
   /**
   * button pushed.
