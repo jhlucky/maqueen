@@ -11,12 +11,6 @@ Centimeters,
 MicroSeconds
 }
 
-enum Motors {
-M1 = 0x0,
-M2 = 0x1
-}
-
-
 
 //% weight=10 color=#008B00 icon="\uf1eb" block="DFRobot miniQ"
 namespace IR{
@@ -24,6 +18,13 @@ namespace IR{
     export class Packeta {
         public mye: string;
         public myparam: number;
+    }
+    
+    enum Motors {
+        //% blockId="M1" block="M1"
+        M1 = 0x0,
+        //% blockId="M2" block="M2"
+        M2 = 0x1
     }
     
     export enum Dir {

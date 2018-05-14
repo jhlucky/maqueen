@@ -1,4 +1,6 @@
 {
+    "IR.Moters.M1|block": "左侧",
+    "IR.Moters.M2|block": "右侧",
     "IR.Dir.CW|block": "正转",
     "IR.Dir.CCW|block": "反转",
     "IR.motorStop|block": "电机 停止|%index",
