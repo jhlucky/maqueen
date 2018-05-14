@@ -158,7 +158,7 @@ namespace IR {
     if(now - lastact[(RemoteButton)buf[2]] < 100) return;
     lastact[(RemoteButton)buf[2]] = now;
     msg=ManagedString(buf[2]).leakData();
-    cA(actions[(RemoteButton)buf[2]]);      
+    cA(actions[atoi((RemoteButton)buf[2]].c_str()));      
   }
 
   void monitorIR(){
