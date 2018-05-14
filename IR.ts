@@ -43,8 +43,8 @@ namespace IR{
         return
     }
      //% advanced=true shim=IR::getParam
-    function getParam():string {
-        return ""
+    function getParam():number {
+        return 0
     }
 
     //% blockId=ir_init2
