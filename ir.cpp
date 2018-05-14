@@ -63,7 +63,7 @@ namespace IR {
   uint32_t now;
   ReceiverIR *rx;
   RemoteIR::Format fmt = RemoteIR::UNKNOWN;
-  int msg;
+  uint8_t msg;
 
   /**
   * button pushed.
@@ -181,7 +181,7 @@ namespace IR {
     create_fiber(monitorIR);
   }
   //% 
-  int getParam(){
+  uint8_t getParam(){
     return msg;
   }
   
