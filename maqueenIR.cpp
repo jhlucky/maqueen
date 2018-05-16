@@ -165,9 +165,9 @@ namespace maqueenIR {
     if(IRcallbackNum < 1){
       return;
     }
-    //for(i=1;i<=IRcallbackNum;i++){
-    cA(actions[(RemoteButton)1]);  
-    //}    
+    for(int i=1;i<=IRcallbackNum;i++){
+      cA(actions[(RemoteButton)i]);  
+    }    
   }
 
   void monitorIR(){
