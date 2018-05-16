@@ -1,6 +1,8 @@
 {
     "IR.Moters.M1|block": "左侧",
     "IR.Moters.M2|block": "右侧",
+    "IR.Patrol.PatrolLeft|block": "左侧",
+    "IR.Patrol.PatrolRight|block": "右侧",
     "IR.Dir.CW|block": "正转",
     "IR.Dir.CCW|block": "反转",
     "IR.motorStop|block": "电机 停止|%index",
@@ -8,5 +10,6 @@
     "IR.MotorRun|block": "电机|%index|方向|%Dir|速度|%speed",
     "IR.DFIR_callbackUser|block": "当接收到红外时运行",
     "IR.initIR|block": "初始化红外到引脚|%pin",
-    "IR.sensor|block": "超声波距离|%unit"
+    "IR.sensor|block": "超声波距离|%unit",
+    "IR.readPatrol|block": "巡线传感器|%patrol"
 }
