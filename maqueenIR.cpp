@@ -164,7 +164,7 @@ namespace maqueenIR {
     if(IRcallbackNum==0){
       return
     }
-    for(i=1;i<=IRcallbackNum,i++){
+    for(i=1;i<=IRcallbackNum;i++){
       cA(actions[(RemoteButton)1]);  
     }    
   }
