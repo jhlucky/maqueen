@@ -165,7 +165,7 @@ namespace maqueenIR {
       return
     }
     for(i=1;i<=IRcallbackNum;i++){
-      cA(actions[(RemoteButton)1]);  
+      cA(actions[(RemoteButton)i]);  
     }    
   }
 
