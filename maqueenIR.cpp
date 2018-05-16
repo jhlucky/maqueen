@@ -161,7 +161,7 @@ namespace maqueenIR {
     if(now - lastact[(RemoteButton)buf[2]] < 100) return;
     lastact[(RemoteButton)buf[2]] = now;
     msg=(int)buf[2];
-    uBit.serial.send(IRcallbackNum);
+    //uBit.serial.send(IRcallbackNum);
     //if(IRcallbackNum < 1){
     //  return;
     //}
