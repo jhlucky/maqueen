@@ -64,6 +64,7 @@ namespace maqueenIR {
   ReceiverIR *rx;
   RemoteIR::Format fmt = RemoteIR::UNKNOWN;
   int msg;
+  int IRcallbackNum=0;
 
   /**
   * button pushed.
@@ -72,6 +73,7 @@ namespace maqueenIR {
   //% block="on |%btn| button pressed"
   void onPressEvent(RemoteButton btn, Action body) {
     //if(actions.find(btn) == actions.end()) actions[btn] = new vector();
+    IRcallbackNum=btn;
     actions[btn].push_back(body);
   }
 
@@ -159,7 +161,12 @@ namespace maqueenIR {
     if(now - lastact[(RemoteButton)buf[2]] < 100) return;
     lastact[(RemoteButton)buf[2]] = now;
     msg=(int)buf[2];
-    cA(actions[(RemoteButton)1]);      
+    if(IRcallbackNum==0){
+      return
+    }
+    for(i=1;i<=IRcallbackNum,i++){
+      cA(actions[(RemoteButton)1]);  
+    }    
   }
 
   void monitorIR(){
