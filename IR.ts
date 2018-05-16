@@ -162,6 +162,17 @@ namespace IR{
         buf[0]=0x02;
         pins.i2cWriteBuffer(0x10, buf);
     }
+    
+    //% weight=10
+    //% blockId=read_LeftPatrol block="Read Left Patrol"
+    export function readLeftPatrol():number{
+        return pins.digitalReadPin(DigitalPin.P13)
+    }
+    //% weight=10
+    //% blockId=read_RightPatrol block="Read Right Patrol"
+    export function readRightPatrol():number{
+        return pins.digitalReadPin(DigitalPin.P14)
+    }
 
   
 }
