@@ -74,7 +74,7 @@ namespace maqueen{
         if(alreadyInit==1){
             return
         }
-        initIR(Pins.P16)
+        initIR(P16)
         alreadyInit=1
     }
   
