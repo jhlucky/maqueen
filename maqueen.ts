@@ -55,8 +55,8 @@ namespace maqueen{
         turnOff=0x00
     }
 
-    //% advanced=true shim=IR::init
-    function init(pin: Pins):void{
+    //% advanced=true shim=IR::initIR
+    function initIR(pin: Pins):void{
         return
     }
     //% advanced=true shim=IR::onPressEvent
@@ -67,11 +67,11 @@ namespace maqueen{
     function getParam():number {
         return 0
     }
-
-    //% blockId=ir_init2
-    //% block="connect ir receiver to pin|%pin"
-    export function initIR(pin: Pins): void{
-        init(pin)
+    
+    //% blockId=maqueenInit
+    //% block="init maqueen"
+    export function maqueenInit():void{
+        initIR(DigitalPin.P16)
     }
   
     //% weight=62

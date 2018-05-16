@@ -175,7 +175,7 @@ namespace maqueenIR {
   */
   //% blockId=ir_init
   //% block="connect ir receiver to %pin"
-  void init(Pins pin){
+  void initIR(Pins pin){
     rx = new ReceiverIR((PinName)pin);
     tsb.start(); //interrupt timer for debounce
     create_fiber(monitorIR);
