@@ -33,6 +33,13 @@ namespace IR{
         //% blockId="CCW" block="CCW"
         CCW = 0x1
     }
+    
+    export enum Patrol{
+        //% blockId="PatrolLeft" block="PatrolLeft"
+        PatrolLeft=DigitalPin.P13,
+        //% blockId="PatrolRight" block="PatrolRight"
+        PatrolRight=DigitalPin.P14
+    }
 
     //% advanced=true shim=IR::init
     function init(pin: Pins):void{
@@ -164,15 +171,12 @@ namespace IR{
     }
     
     //% weight=10
-    //% blockId=read_LeftPatrol block="Read Left Patrol"
-    export function readLeftPatrol():number{
-        return pins.digitalReadPin(DigitalPin.P13)
+    //% blockId=read_Patrol block="Read Patrol|%patrol"
+    //% patrol.fieldEditor="gridpicker" patrol.fieldOptions.columns=2 
+    export function readPatrol(patrol:Patrol):number{
+        return pins.digitalReadPin(patrol)
     }
-    //% weight=10
-    //% blockId=read_RightPatrol block="Read Right Patrol"
-    export function readRightPatrol():number{
-        return pins.digitalReadPin(DigitalPin.P14)
-    }
+    
 
   
 }
