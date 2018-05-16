@@ -64,7 +64,7 @@ namespace maqueenIR {
   ReceiverIR *rx;
   RemoteIR::Format fmt = RemoteIR::UNKNOWN;
   int msg;
-  int IRcallbackNum;
+  int IRcallbackNum=0;
 
   /**
   * button pushed.
@@ -73,7 +73,7 @@ namespace maqueenIR {
   //% block="on |%btn| button pressed"
   void onPressEvent(RemoteButton btn, Action body) {
     //if(actions.find(btn) == actions.end()) actions[btn] = new vector();
-    //IRcallbackNum=btn;
+    IRcallbackNum=btn;
     actions[btn].push_back(body);
   }
 
@@ -163,11 +163,11 @@ namespace maqueenIR {
     msg=(int)buf[2];
     
     if(IRcallbackNum < 1){
-      return
+      return;
     }
-    //for(i=1;i<=IRcallbackNum;i++){
-    cA(actions[(RemoteButton)1]);  
-    //}    
+    for(i=1;i<=IRcallbackNum;i++){
+      cA(actions[(RemoteButton)i]);  
+    }    
   }
 
   void monitorIR(){
@@ -185,7 +185,6 @@ namespace maqueenIR {
   //% blockId=ir_init
   //% block="connect ir receiver to %pin"
   void initIR(Pins pin){
-    IRcallbackNum=0
     rx = new ReceiverIR((PinName)pin);
     tsb.start(); //interrupt timer for debounce
     create_fiber(monitorIR);
