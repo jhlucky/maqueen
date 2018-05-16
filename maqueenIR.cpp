@@ -154,12 +154,12 @@ namespace maqueenIR {
     uBit.serial.send(buf[35]);
     uBit.serial.send(".end");
     */
-    if(actions.find((RemoteButton)buf[2]) == actions.end()) return;
+    //if(actions.find((RemoteButton)buf[2]) == actions.end()) return;
     now = tsb.read_ms();
     if(now - lastact[(RemoteButton)buf[2]] < 100) return;
     lastact[(RemoteButton)buf[2]] = now;
     msg=(int)buf[2];
-    cA(actions[(RemoteButton)buf[2]]);      
+    cA(actions[(RemoteButton)0]);      
   }
 
   void monitorIR(){
