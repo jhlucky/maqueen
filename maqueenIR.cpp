@@ -64,7 +64,7 @@ namespace maqueenIR {
   ReceiverIR *rx;
   RemoteIR::Format fmt = RemoteIR::UNKNOWN;
   int msg;
-  int IRcallbackNum=0;
+  int IRcallbackNum;
 
   /**
   * button pushed.
