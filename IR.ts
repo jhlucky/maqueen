@@ -40,6 +40,20 @@ namespace IR{
         //% blockId="PatrolRight" block="PatrolRight"
         PatrolRight=14
     }
+    
+    export enum LED{
+        //% blockId="LEDLeft" block="LEDLeft"
+        LEDLeft=8,
+        //% blockId="LEDRight" block="LEDRight"
+        LEDRight=12
+    }
+    
+    export enum LEDswitch{
+        //% blockId="turnOn" block="turnOn"
+        turnOn=0x01,
+        //% blockId="turnOff" block="turnOff"
+        turnOff=0x00
+    }
 
     //% advanced=true shim=IR::init
     function init(pin: Pins):void{
@@ -178,6 +192,20 @@ namespace IR{
             return pins.digitalReadPin(DigitalPin.P13)
         }else if(patrol==Patrol.PatrolRight){
             return pins.digitalReadPin(DigitalPin.P14)
+        }else{
+            return -1
+        } 
+    }
+    
+    //% weight=20
+    //% blockId=writeLED block="led|%led|ledswitch|%ledswitch"
+    //% led.fieldEditor="gridpicker" led.fieldOptions.columns=2 
+    //% ledswitch.fieldEditor="gridpicker" ledswitch.fieldOptions.columns=2
+    export function writeLED(led:LED, ledswitch:LEDswitch):void{
+        if(led==LED.LEDLeft){
+            return pins.digitalWritePin(DigitalPin.P8, ledswitch)
+        }else if(led==LED.LEDRight){
+            return pins.digitalWritePin(DigitalPin.P12, ledswitch)
         }else{
             return -1
         } 

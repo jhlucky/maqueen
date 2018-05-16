@@ -3,6 +3,8 @@
     "IR.Moters.M2|block": "右侧",
     "IR.Patrol.PatrolLeft|block": "左侧",
     "IR.Patrol.PatrolRight|block": "右侧",
+    "IR.LED.LEDLeft|block": "左侧",
+    "IR.LED.LEDRight|block": "右侧",
     "IR.Dir.CW|block": "正转",
     "IR.Dir.CCW|block": "反转",
     "IR.motorStop|block": "电机 停止|%index",
