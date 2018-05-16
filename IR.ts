@@ -203,11 +203,11 @@ namespace IR{
     //% ledswitch.fieldEditor="gridpicker" ledswitch.fieldOptions.columns=2
     export function writeLED(led:LED, ledswitch:LEDswitch):void{
         if(led==LED.LEDLeft){
-            return pins.digitalWritePin(DigitalPin.P8, ledswitch)
+            pins.digitalWritePin(DigitalPin.P8, ledswitch)
         }else if(led==LED.LEDRight){
-            return pins.digitalWritePin(DigitalPin.P12, ledswitch)
+            pins.digitalWritePin(DigitalPin.P12, ledswitch)
         }else{
-            return -1
+            return
         } 
     }
     
