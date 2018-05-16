@@ -161,12 +161,12 @@ namespace maqueenIR {
     if(now - lastact[(RemoteButton)buf[2]] < 100) return;
     lastact[(RemoteButton)buf[2]] = now;
     msg=(int)buf[2];
-    if(IRcallbackNum==0){
-      return
-    }
-    for(i=1;i<=IRcallbackNum;i++){
-      cA(actions[(RemoteButton)i]);  
-    }    
+    //if(IRcallbackNum==0){
+    //  return
+    //}
+    //for(i=1;i<=IRcallbackNum;i++){
+    cA(actions[(RemoteButton)1]);  
+    //}    
   }
 
   void monitorIR(){
