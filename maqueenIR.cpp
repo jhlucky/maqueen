@@ -64,7 +64,7 @@ namespace maqueenIR {
   ReceiverIR *rx;
   RemoteIR::Format fmt = RemoteIR::UNKNOWN;
   int msg;
-  //int IRcallbackNum;
+  int IRcallbackNum;
 
   /**
   * button pushed.
@@ -73,7 +73,7 @@ namespace maqueenIR {
   //% block="on |%btn| button pressed"
   void onPressEvent(RemoteButton btn, Action body) {
     //if(actions.find(btn) == actions.end()) actions[btn] = new vector();
-    //IRcallbackNum=(int)btn;
+    IRcallbackNum=(int)btn;
     actions[btn].push_back(body);
   }
 
