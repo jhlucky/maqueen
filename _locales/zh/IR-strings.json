@@ -8,5 +8,7 @@
     "IR.MotorRun|block": "电机|%index|方向|%Dir|速度|%speed",
     "IR.DFIR_callbackUser|block": "当接收到红外时运行",
     "IR.initIR|block": "初始化红外到引脚|%pin",
-    "IR.sensor|block": "超声波距离|%unit"
+    "IR.sensor|block": "超声波距离|%unit",
+    "IR.readLeftPatrol|block": "巡线传感器左侧",
+    "IR.readRightPatrol|block": "巡线传感器右侧"
 }
