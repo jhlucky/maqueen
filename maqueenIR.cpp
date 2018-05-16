@@ -159,7 +159,7 @@ namespace maqueenIR {
     if(now - lastact[(RemoteButton)buf[2]] < 100) return;
     lastact[(RemoteButton)buf[2]] = now;
     msg=(int)buf[2];
-    cA(actions[(RemoteButton)0]);      
+    cA(actions[(RemoteButton)1]);      
   }
 
   void monitorIR(){
