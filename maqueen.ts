@@ -71,7 +71,7 @@ namespace maqueen{
     //% blockId=maqueenInit
     //% block="init maqueen"
     export function maqueenInit():void{
-        initIR(DigitalPin.P16)
+        initIR(Pins.P16)
     }
   
     //% weight=62
