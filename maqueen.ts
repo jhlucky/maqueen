@@ -2,6 +2,7 @@ let cb: Action
 let mycb: Action
 let e        = "1"
 let param    = 0
+let alreadyInit=0
 const MOTER_ADDRESSS = 0x10
 
 enum PingUnit {
@@ -63,15 +64,18 @@ namespace maqueen{
     function onPressEvent(btn: RemoteButton,body: Action):void{
         return
     }
-     //% advanced=true shim=maqueenIR::getParam
+    //% advanced=true shim=maqueenIR::getParam
     function getParam():number {
         return 0
     }
     
-    //% blockId=maqueenInit
-    //% block="init maqueen"
-    export function maqueenInit():void{
+    //% 
+    function maqueenInit():void{
+        if(alreadyInit==1){
+            return
+        }
         initIR(Pins.P16)
+        alreadyInit=1
     }
   
     //% weight=62
@@ -80,7 +84,8 @@ namespace maqueen{
     //% mutateText=Packeta
     //% mutateDefaults="myparam:message"
     //% blockId=DFIR_callbackUser block="on obloq received"
-    export function DFIR_callbackUser(cb: (packet: Packeta) => void) {
+    export function IR_callbackUser(cb: (packet: Packeta) => void) {
+        maqueenInit()
         DFIR_callback(() => {
             const packet = new Packeta();
             packet.mye = e;
@@ -91,7 +96,7 @@ namespace maqueen{
     }
     
    
-    
+    //% 
     function DFIR_callback(a: Action): void{
         cb=a
         onPressEvent(0,cb)

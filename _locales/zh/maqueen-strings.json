@@ -12,8 +12,7 @@
     "maqueen.motorStop|block": "电机 停止|%index",
     "maqueen.motorStopAll|block": "停止所有电机",
     "maqueen.MotorRun|block": "电机|%index|方向|%Dir|速度|%speed",
-    "maqueen.DFIR_callbackUser|block": "当接收到红外时运行",
-    "maqueen.maqueenInit|block": "初始化小车",
+    "maqueen.IR_callbackUser|block": "当接收到红外时运行",
     "maqueen.sensor|block": "超声波距离|%unit",
     "maqueen.readPatrol|block": "巡线传感器|%patrol",
     "maqueen.writeLED|block": "LED灯|%led,|%ledswitch"
