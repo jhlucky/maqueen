@@ -69,12 +69,11 @@ namespace maqueen{
         return 0
     }
     
-    //% 
     function maqueenInit():void{
         if(alreadyInit==1){
             return
         }
-        initIR(P16)
+        initIR(Pins.P16)
         alreadyInit=1
     }
   
@@ -83,7 +82,7 @@ namespace maqueen{
     //% mutate=objectdestructuring
     //% mutateText=Packeta
     //% mutateDefaults="myparam:message"
-    //% blockId=DFIR_callbackUser block="on obloq received"
+    //% blockId=IR_callbackUser block="on obloq received"
     export function IR_callbackUser(cb: (packet: Packeta) => void) {
         maqueenInit()
         DFIR_callback(() => {
@@ -96,7 +95,6 @@ namespace maqueen{
     }
     
    
-    //% 
     function DFIR_callback(a: Action): void{
         cb=a
         onPressEvent(0,cb)
