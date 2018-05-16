@@ -79,6 +79,7 @@ namespace maqueenIR {
 
   void onReceivable(){
     int x = rx->getData(&fmt, buf, 32 * 8);
+    /*
     uBit.serial.send(".");
     uBit.serial.send(buf[0]);
     uBit.serial.send(".");
@@ -152,7 +153,7 @@ namespace maqueenIR {
     uBit.serial.send(".");
     uBit.serial.send(buf[35]);
     uBit.serial.send(".end");
-
+    */
     if(actions.find((RemoteButton)buf[2]) == actions.end()) return;
     now = tsb.read_ms();
     if(now - lastact[(RemoteButton)buf[2]] < 100) return;

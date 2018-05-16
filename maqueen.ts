@@ -12,7 +12,7 @@ MicroSeconds
 }
 
 
-//% weight=10 color=#008B00 icon="\uf1eb" block="DFRobot miniQ"
+//% weight=10 color=#008B00 icon="\uf1eb" block="maqueen"
 namespace maqueen{
   
     export class Packeta {
