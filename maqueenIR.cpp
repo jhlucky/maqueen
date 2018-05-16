@@ -73,7 +73,7 @@ namespace maqueenIR {
   //% block="on |%btn| button pressed"
   void onPressEvent(RemoteButton btn, Action body) {
     //if(actions.find(btn) == actions.end()) actions[btn] = new vector();
-    IRcallbackNum=btn;
+    IRcallbackNum=(int)btn;
     actions[btn].push_back(body);
   }
 
