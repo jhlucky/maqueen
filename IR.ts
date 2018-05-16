@@ -36,9 +36,9 @@ namespace IR{
     
     export enum Patrol{
         //% blockId="PatrolLeft" block="PatrolLeft"
-        PatrolLeft=DigitalPin.P13,
+        PatrolLeft=13,
         //% blockId="PatrolRight" block="PatrolRight"
-        PatrolRight=DigitalPin.P14
+        PatrolRight=14
     }
 
     //% advanced=true shim=IR::init
@@ -174,7 +174,13 @@ namespace IR{
     //% blockId=read_Patrol block="Read Patrol|%patrol"
     //% patrol.fieldEditor="gridpicker" patrol.fieldOptions.columns=2 
     export function readPatrol(patrol:Patrol):number{
-        return pins.digitalReadPin(patrol)
+        if(patrol==Patrol.PatrolLeft){
+            return pins.digitalReadPin(DigitalPin.P13)
+        }else if(patrol==Patrol.PatrolRight){
+            return pins.digitalReadPin(DigitalPin.P14)
+        }else{
+            return -1
+        } 
     }
     
 
