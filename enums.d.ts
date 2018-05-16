@@ -49,7 +49,7 @@
     }
     
 
-declare namespace IR {
+declare namespace maqueenIR {
 }
 
 // Auto-generated. Do not edit. Really.

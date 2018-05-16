@@ -1,22 +1,22 @@
 {
-    "name": "IR",
+    "name": "maqueen",
     "version": "0.0.1",
-    "description": "Tinkercademy package for ElecFreaks IR receiver module",
+    "description": "Tinkercademy package for ElecFreaks maqueen receiver module",
     "license": "MIT",
     "dependencies": {
         "core": "*",
         "radio": "*"
     },
     "files": [
-        "IR.ts",
+        "maqueen.ts",
         "enums.d.ts",
-        "ir.cpp",
+        "maqueenIR.cpp",
         "ReceiverIR.cpp",
         "ReceiverIR.h",
         "RemoteIR.h",
         "TransmitterIR.cpp",
         "TransmitterIR.h",
-        "_locales/zh/IR-strings.json"
+        "_locales/zh/maqueen-strings.json"
     ],
     "testFiles": [
         "tests.ts"

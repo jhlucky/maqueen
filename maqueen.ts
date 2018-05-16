@@ -13,7 +13,7 @@ MicroSeconds
 
 
 //% weight=10 color=#008B00 icon="\uf1eb" block="DFRobot miniQ"
-namespace IR{
+namespace maqueen{
   
     export class Packeta {
         public mye: string;
