@@ -22,11 +22,11 @@ namespace maqueen{
         public myparam: number;
     }
     
-    export enum Motors {
-        //% blockId="ML" block="ML"
-        ML = 0x0,
-        //% blockId="MR" block="MR"
-        MR = 0x1
+    export enum Motors{
+        //% blockId="M1" block="M1"
+        M1=0,
+        //% blockId="M2" block="M2"
+        M2=1
     }
     
     export enum Dir {
