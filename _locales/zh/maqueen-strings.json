@@ -9,7 +9,7 @@
     "maqueen.LED.LEDRight|block": "右侧",
     "maqueen.Dir.CW|block": "正转",
     "maqueen.Dir.CCW|block": "反转",
-    "maqueen.motorStop|block": "电机 停止|%Motors",
+    "maqueen.motorStop|block": "电机 停止|%motors",
     "maqueen.motorStopAll|block": "停止所有电机",
     "maqueen.MotorRun|block": "电机|%index|方向|%Dir|速度|%speed",
     "maqueen.IR_callbackUser|block": "当接收到红外时运行",
