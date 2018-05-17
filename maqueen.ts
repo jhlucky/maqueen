@@ -95,6 +95,13 @@ namespace maqueen{
         });
     }
     
+    //% weight=10
+    //% blockId=IR_read block="read IR"
+    export function IR_read():number{
+        maqueenInit()
+        return getParam()
+    }
+    
    
     function IR_callback(a: Action): void{
         cb=a
