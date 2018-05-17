@@ -1,6 +1,6 @@
 {
-    "maqueen.Moters.ML|block": "左侧",
-    "maqueen.Moters.MR|block": "右侧",
+    "maqueen.Moters.M1|block": "左侧",
+    "maqueen.Moters.M2|block": "右侧",
     "maqueen.Patrol.PatrolLeft|block": "左侧",
     "maqueen.Patrol.PatrolRight|block": "右侧",
     "maqueen.LEDswitch.turnOn|block": "开",
@@ -15,6 +15,5 @@
     "maqueen.IR_callbackUser|block": "当接收到红外时运行",
     "maqueen.sensor|block": "超声波距离|%unit",
     "maqueen.readPatrol|block": "巡线传感器|%patrol",
-    "maqueen.writeLED|block": "LED灯|%led,|%ledswitch",
-    "maqueen.Moters.ML|block": "左侧"
+    "maqueen.writeLED|block": "LED灯|%led,|%ledswitch"
 }
