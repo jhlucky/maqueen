@@ -23,10 +23,10 @@ namespace maqueen{
     }
     
     export enum Motors {
-        //% blockId="M1" block="M1"
-        M1 = 0x0,
-        //% blockId="M2" block="M2"
-        M2 = 0x1
+        //% blockId="ML" block="ML"
+        ML = 0x0,
+        //% blockId="MR" block="MR"
+        MR = 0x1
     }
     
     export enum Dir {
