@@ -120,11 +120,13 @@ namespace maqueen{
         control.waitMicros(10);
         pins.digitalWritePin(DigitalPin.P1, 0);
         
-        basic.pause(100)
+        
 
         // read pulse
         let d = pins.pulseIn(DigitalPin.P2, PulseValue.High, maxCmDistance * 42);
         console.log("Distance: " + d/42);
+        
+        basic.pause(100)
 
         switch (unit) {
             case PingUnit.Centimeters: return d / 42;
