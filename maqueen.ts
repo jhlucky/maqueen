@@ -142,14 +142,14 @@ namespace maqueen{
     }
     
     //% weight=20
-    //% blockId=motor_motorStop block="Motor stop|index|%Motors"
-    //% index.fieldEditor="gridpicker" index.fieldOptions.columns=2 
-    export function motorStop(index: Motors):void {
+    //% blockId=motor_motorStop block="Motor stop|%Motors"
+    //% motors.fieldEditor="gridpicker" motors.fieldOptions.columns=2 
+    export function motorStop(motors: Motors):void {
         let buf = pins.createBuffer(3);
-        if(index==0){
+        if(motors==0){
             buf[0]=0x00;
         }
-        if(index==1){
+        if(motors==1){
             buf[0]=0x02;
         }
         buf[1]=0;
