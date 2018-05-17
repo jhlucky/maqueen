@@ -120,7 +120,7 @@ namespace maqueen{
         control.waitMicros(10);
         pins.digitalWritePin(DigitalPin.P1, 0);
         
-        //basic.pause(50)
+        basic.pause(100)
 
         // read pulse
         let d = pins.pulseIn(DigitalPin.P2, PulseValue.High, maxCmDistance * 42);
