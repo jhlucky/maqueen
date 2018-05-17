@@ -29,13 +29,6 @@ namespace maqueen{
         MR = 0x1
     }
     
-    export enum Motors1 {
-        //% blockId="ML1" block="ML1"
-        ML1 = 0x0,
-        //% blockId="MR1" block="MR1"
-        MR1 = 0x1
-    }
-    
     export enum Dir {
         //% blockId="CW" block="CW"
         CW = 0x0,
@@ -151,7 +144,7 @@ namespace maqueen{
     //% weight=20
     //% blockId=motor_motorStop block="Motor stop|%motors"
     //% motors.fieldEditor="gridpicker" motors.fieldOptions.columns=2 
-    export function motorStop(motors: Motors1):void {
+    export function motorStop(motors: Motors):void {
         let buf = pins.createBuffer(3);
         if(motors==0){
             buf[0]=0x00;
