@@ -4,8 +4,7 @@
     "description": "Tinkercademy package for ElecFreaks maqueen receiver module",
     "license": "MIT",
     "dependencies": {
-        "core": "*",
-        "radio": "*"
+        "core": "*"
     },
     "files": [
         "maqueen.ts",
