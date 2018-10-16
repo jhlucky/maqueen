@@ -173,7 +173,8 @@ namespace maqueenIR {
   void monitorIR(){
     while(1){
       while(rx->getState() != ReceiverIR::Received){ 
-        uBit.sleep(50);
+        uBit.sleep(60);
+        // Ick was ere
       }
       onReceivable();
     }
