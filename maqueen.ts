@@ -97,8 +97,8 @@ namespace maqueen{
     
     //% weight=10
     //% blockId=IR_read block="read IR"
-    export function IR_read():number{
-        maqueenInit()
+    export function IR_read_ick():number{
+        maqueenInitIck()
         return getParam()
     }
     
