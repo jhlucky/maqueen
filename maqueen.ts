@@ -119,6 +119,7 @@ namespace maqueen{
         pins.digitalWritePin(DigitalPin.P1, 1);
         control.waitMicros(10);
         pins.digitalWritePin(DigitalPin.P1, 0);
+        pins.setPull(DigitalPin.P2, PinPullMode.PullUp);
         
         
 
