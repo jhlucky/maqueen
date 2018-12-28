@@ -16,6 +16,7 @@
         "TransmitterIR.cpp",
         "TransmitterIR.h",
         "_locales/zh/maqueen-strings.json"
+		"_locales/nl/maqueen-strings.json"
     ],
     "testFiles": [
         "tests.ts"
