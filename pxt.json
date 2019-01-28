@@ -15,7 +15,8 @@
         "RemoteIR.h",
         "TransmitterIR.cpp",
         "TransmitterIR.h",
-        "_locales/de/maqueen-strings.json"
+        "_locales/de/maqueen-strings.json",
+        "shims.d.ts"
     ],
     "testFiles": [
         "tests.ts"
