@@ -1,0 +1,20 @@
+{
+    "maqueen.aMotors.M1|block": "M1",
+    "maqueen.aMotors.M2|block": "M2",
+    "maqueen.Patrol.PatrolLeft|block": "RouteLinks",
+    "maqueen.Patrol.PatrolRight|block": "RouteRechts",
+    "maqueen.LEDswitch.turnOn|block": "LED Aan",
+    "maqueen.LEDswitch.turnOff|block": "LED Uit",
+    "maqueen.LED.LEDLeft|block": "LED links",
+    "maqueen.LED.LEDRight|block": "LED rechts",
+    "maqueen.Dir.CW|block": "Met de klok mee",
+    "maqueen.Dir.CCW|block": "Tegen de klok in",
+    "maqueen.motorStop|block": "Stop motor|%motors",
+    "maqueen.motorStopAll|block": "Stop alle motoren",
+    "maqueen.MotorRun|block": "Motor|%index|richting|%Dir|snelheid|%speed",
+    "maqueen.IR_callbackUser|block": "op obloq ontvangen",
+    "maqueen.sensor|block": "Sensor eenheid|%unit",
+    "maqueen.readPatrol|block": "Lees route geleiding|%patrol",
+    "maqueen.writeLED|block": "LED|%led|LED schakelaar|%ledswitch",
+    "maqueen.IR_read|block": "Lees infrarood"
+}
