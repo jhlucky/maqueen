@@ -112,10 +112,10 @@ namespace maqueen{
     //% blockId=ultrasonic_sensor block="sensor unit|%unit"
     //% weight=95
     export function sensor(unit: PingUnit, maxCmDistance = 500): number {
-        // send pulse
+        // send pulse  pins.waitMicros=delay  basic.pause=sleep
         pins.setPull(DigitalPin.P1, PinPullMode.PullNone);
         pins.digitalWritePin(DigitalPin.P1, 0);
-        control.waitMicros(2);
+        control.waitMicros(2); 
         pins.digitalWritePin(DigitalPin.P1, 1);
         control.waitMicros(10);
         pins.digitalWritePin(DigitalPin.P1, 0);
