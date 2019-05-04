@@ -13,6 +13,7 @@
         "ReceiverIR.cpp",
         "ReceiverIR.h",
         "RemoteIR.h",
+        "Shims.d.ts",
         "TransmitterIR.cpp",
         "TransmitterIR.h",
         "_locales/zh/maqueen-strings.json"
