@@ -1,0 +1,61 @@
+{
+    "name": "Name Tag",
+    "meta": {},
+    "editor": "blocksprj",
+    "pubId": "",
+    "pubCurrent": false,
+    "target": "microbit",
+    "targetVersion": "1.4.5",
+    "tutorial": {
+        "tutorial": "/projects/name-tag",
+        "tutorialName": "Name Tag",
+        "tutorialStep": 0,
+        "tutorialReady": true,
+        "tutorialStepInfo": [
+            {
+                "fullscreen": true,
+                "unplugged": true,
+                "headerContentMd": "Tell everyone who you are. Show you name on the LEDs.",
+                "contentMd": "Tell everyone who you are. Show you name on the LEDs.\n\n![Name scrolling on the LEDs](/static/mb/projects/name-tag/name-tag.gif)",
+                "hasHint": true
+            },
+            {
+                "fullscreen": true,
+                "unplugged": false,
+                "headerContentMd": "Place the ``||basic:show string||`` block in the ``||basic:forever||`` block to repeat it. Change the text to your name.",
+                "contentMd": "Place the ``||basic:show string||`` block in the ``||basic:forever||`` block to repeat it. Change the text to your name.\n\n```blocks\nbasic.forever(() => {\n    basic.showString(\"MICRO\");\n});\n```",
+                "hasHint": true
+            },
+            {
+                "fullscreen": true,
+                "unplugged": false,
+                "headerContentMd": "Look at the simulator and make sure it shows up your name on the screen.",
+                "contentMd": "Look at the simulator and make sure it shows up your name on the screen.\n\n![Name scrolling on the LEDs](/static/mb/projects/name-tag/name-tag.gif)",
+                "hasHint": true
+            },
+            {
+                "fullscreen": true,
+                "unplugged": false,
+                "headerContentMd": "Place more ``||basic:show string||`` blocks to create your own story.",
+                "contentMd": "Place more ``||basic:show string||`` blocks to create your own story.\n\n```blocks\nbasic.forever(() => {\n    basic.showString(\"MICRO\");\n    basic.showString(\"<3<3<3\");\n})\n```",
+                "hasHint": true
+            },
+            {
+                "fullscreen": true,
+                "unplugged": true,
+                "headerContentMd": "If you have a @boardname@ connected, click ``|Download|`` to transfer your code and watch your name scroll!",
+                "contentMd": "If you have a @boardname@ connected, click ``|Download|`` to transfer your code and watch your name scroll!",
+                "hasHint": false
+            }
+        ],
+        "tutorialMd": "# Name Tag\n\n## Introduction @unplugged\n\nTell everyone who you are. Show you name on the LEDs.\n\n![Name scrolling on the LEDs](/static/mb/projects/name-tag/name-tag.gif)\n\n## Step 1 @fullscreen\n\nPlace the ``||basic:show string||`` block in the ``||basic:forever||`` block to repeat it. Change the text to your name.\n\n```blocks\nbasic.forever(() => {\n    basic.showString(\"MICRO\");\n});\n```\n\n## Step 2 @fullscreen\n\nLook at the simulator and make sure it shows up your name on the screen.\n\n![Name scrolling on the LEDs](/static/mb/projects/name-tag/name-tag.gif)\n\n## Step 3 @fullscreen\n\nPlace more ``||basic:show string||`` blocks to create your own story.\n\n```blocks\nbasic.forever(() => {\n    basic.showString(\"MICRO\");\n    basic.showString(\"<3<3<3\");\n})\n```\n\n## Step 4 @unplugged\n\nIf you have a @boardname@ connected, click ``|Download|`` to transfer your code and watch your name scroll!\n",
+        "tutorialCode": "\n { \n basic.forever(() => {\n    basic.showString(\"MICRO\");\n});\n } \n\n { \n basic.forever(() => {\n    basic.showString(\"MICRO\");\n    basic.showString(\"<3<3<3\");\n})\n } \n"
+    },
+    "id": "8eb166f4-5640-4f4e-7738-fea6700643ac",
+    "recentUse": 1559736209,
+    "modificationTime": 1559736208,
+    "path": "Name-Tag",
+    "blobCurrent": false,
+    "saveId": null,
+    "githubCurrent": false
+}

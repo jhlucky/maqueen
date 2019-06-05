@@ -5,16 +5,16 @@
     "maqueen.Patrol.PatrolRight|block": "Право",
     "maqueen.LEDswitch.turnOn|block": "Включить",
     "maqueen.LEDswitch.turnOff|block": "Выключить",
-    "maqueen.LED.LEDLeft|block": "Левый LED",
-    "maqueen.LED.LEDRight|block": "Правый LED",
+    "maqueen.LED.LEDLeft|block": "L LED",
+    "maqueen.LED.LEDRight|block": "R LED",
     "maqueen.Dir.CW|block": "Вперед",
     "maqueen.Dir.CCW|block": "Назад",
     "maqueen.motorStop|block": "Остановить мотор(-ы)|%motors",
     "maqueen.motorStopAll|block": "Остановить все моторы",
     "maqueen.MotorRun|block": "Мотор|%index|напрвление|%Dir|скорость|%speed",
-    "maqueen.IR_callbackUser|block": "Получение инфракрасного сигнала",
+    "maqueen.IR_callbackUser|block": "Получение инфракрасного сигнала",   //Если это и инфракрасный сигнал, то называть надо: "Использование пульта ", или  как-то так.
     "maqueen.sensor|block": "Расстояние|%unit",
     "maqueen.readPatrol|block": "Датчик|%patrol",
     "maqueen.writeLED|block": "LED|%led,|%ledswitch",
-    "maqueen.IR_read|block": "Значение инфрокрасного сигнала"
+    "maqueen.IR_read|block": "Значение инфрокрасного сигнала"    //А здесь получается что-то такое: "Команда поступившая с пульта"
 }
