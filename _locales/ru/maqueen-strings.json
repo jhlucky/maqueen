@@ -12,9 +12,9 @@
     "maqueen.motorStop|block": "Остановить мотор(-ы)|%motors",
     "maqueen.motorStopAll|block": "Остановить все моторы",
     "maqueen.MotorRun|block": "Мотор|%index|напрвление|%Dir|скорость|%speed",
-    "maqueen.IR_callbackUser|block": "Использование пульта",   //Было так: "Получение инфракрасного сигнала"
+    "maqueen.IR_callbackUser|block": "По команде с пульта",   
     "maqueen.sensor|block": "Расстояние|%unit",
-    "maqueen.readPatrol|block": "Датчик|%patrol",
+    "maqueen.readPatrol|block": "Цвет|%patrol",
     "maqueen.writeLED|block": "LED|%led,|%ledswitch",
-    "maqueen.IR_read|block": "Команда поступившая с пульта"    //Было так: "Значение инфрокрасного сигнала"
+    "maqueen.IR_read|block": "Команда с пульта",
 }
